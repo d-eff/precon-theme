@@ -1,0 +1,273 @@
+
+/*
+  Theme Name:   Policy Recon Theme
+  Theme URI:    policyrecon.com
+  Description:  Custom Theme for PolicyRecon.com.
+  Author:       DEF
+  Version:      1.0.0
+  Tags:         none
+  Text Domain:  precon
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-family: tahoma, arial, sans-serif;
+	font-size: 16px;
+}
+
+
+.contentWrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/*HEADER*/
+.siteHeader{
+	background-color: #666699;
+	color: #ffffff;
+	padding: 3px;
+	position: relative;
+	margin: 2px 0 0;
+}
+
+.siteTitle {
+	margin: 0 0 10px;
+}
+.siteTitle a {
+	font-size: 3.2rem;
+	color: #ffffff;
+	margin: 0 0 8px;
+}
+.siteTitleWrap {
+	display: inline-block;
+	width: 28%;
+	vertical-align: top;
+	text-align: center;
+	margin: 5px 0 0;
+}
+
+.siteLogo {
+	border: 3px solid #CCCCCC;
+}
+
+.loginForm {
+	display: none;
+	background-color: #FFFFFF;
+	z-index: 10;
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+.login {
+	color: #FFFFFF;
+	font-size: 0.8125rem;
+}
+.searchform {
+	position: absolute;
+	bottom: -1px;
+	right: -1px;
+	padding: 4px;
+	border: 1px solid #FFFFFF;
+}
+.searchFormInput {
+	width: 200px;
+}
+
+.siteByline {
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+	font-size: 0.8125rem;
+	margin-top: 37px;
+}
+.headerRight {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	text-align: right;
+	float: right;
+}
+.socialLinks li{
+	display: inline-block;
+	width: 35px;
+}
+.socialLinks img {
+	width: 100%;
+}
+.socialHeader {
+	position: absolute;
+	right: 5px;
+	bottom: 38px;
+}
+
+.mainMenuWrap {
+	margin: 3px 0 0;
+}
+.mainMenu {
+	background-color: #DDDDDD;
+	border: 1px solid #554C64;
+}
+.mainMenu li {
+	display: inline-block;
+	border-right: 1px solid #554C64; 
+}
+.mainMenu a {
+	color: #777777;
+	padding: 4px 15px;
+	display: inline-block;
+}
+.mainMenu a:hover {
+	color: #000000;
+	background-color: #8BAABF;
+}
+li.rightItem {
+	float: right;
+	border-right: none;
+	border-left: 1px solid #554C64; 
+}
+
+
+
+.main {
+	margin: 10px 0;
+
+}
+
+.mainSidebarLeft,
+.mainSidebarRight {
+	display: inline-block;
+	width: 24%;
+	vertical-align: top;
+}
+
+.homepageFeed {
+	display: inline-block;
+	width: 47%;
+	margin: 0 20px;
+}
+
+.headlineBox {
+	background-color: #666699;
+	color: #FFFFFF;
+	padding: 4px 5px;
+	font-size: 1.8rem;
+	border-radius: 1px;
+}
+
+.mainPost {
+	font-family: tahoma, arial, sans-serif;
+	font-size: 0.8125rem;
+	line-height: 1.2;
+	margin: 0 0 40px;
+}
+.postTitle {
+	margin: 8px 0 5px;
+}
+.postTitle a {
+	font-size: 1.5rem;
+	color: #666666;
+	font-weight: bold;
+}
+
+/*WIDGETS*/
+.widgetWrap {
+	margin: 0 0 20px;
+	background-color: #F9F9FF;
+	border-radius: 1px;
+}
+.widgetWrap a {
+	font-size: 0.8125rem;
+	padding: 2px 8px;
+	display: inline-block;
+	border-left: 7px solid #CCCCCC;
+	margin: 1px 6px;
+	color: #000000;
+}
+
+.widgetTitle {
+	background-color: #A6A6CE;
+	color: #FFFFFF;
+	padding: 4px 5px;
+	font-size: 1.4rem;
+}
+
+
+
+/*FOOTER*/
+.pageFooter {
+	background-color: #AFAFAF;
+	color: #FFFFFF;
+	padding: 10px 20px;
+	overflow: hidden;
+}
+.pageFooter p {
+	display: inline-block;
+	width: 50%;
+	margin-top: 10px;
+	font-size: 0.8125rem;
+}
+.footerMenu {
+	float:right;
+
+}
+
+/*PAGE TEMPLATE */
+.normalpageFeed {
+	width: 73%;
+	display: inline-block;
+	margin: 0 0 0 25px;
+}
+.normalpageFeed .entry {
+	margin: 20px 0;
+}
+
