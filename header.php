@@ -15,7 +15,12 @@
 	</div>
 	<h4 class="siteByline"><?php if(get_option('site_byline')): echo(get_option('site_byline')); endif; ?></h4>
 	<div class="headerRight">
-		<a href="#" class="login">LOGIN</a>
+		<?php if(!is_user_logged_in()): ?>
+			<a href="#" class="login">LOGIN</a>
+		<?php else: ?>
+			<a href="<?php echo wp_logout_url(home_url()); ?>" class="login">LOGOUT</a>
+		<?php endif; ?>
+
 		<div class="loginForm"><?php wp_login_form(); ?></div>
 	
 		<ul class="socialLinks socialHeader">
@@ -30,9 +35,9 @@
   	<menu class="mainMenuWrap">
 		<ul class="mainMenu">
 			<li><a href="/">HOME</a></li>
-			<li><a href="http://local.policyrecon.com/forecast/">FORECASTS</a></li>
-			<li><a href="http://local.policyrecon.com/Question/">ISSUES</a></li>
-			<li><a href="http://local.policyrecon.com/country-analysis/">COUNTRIES</a></li>
+			<li><a href="/forecast">FORECASTS</a></li>
+			<li><a href="/issues">ISSUES</a></li>
+			<li><a href="/country-analysis">COUNTRIES</a></li>
 			<li><a href="#">TRENDS</a></li>
 			<li class="rightItem"><a href="#">WHAT WE DO</a></li>
 			<li class="rightItem"><a href="#">WHO WE ARE</a></li>

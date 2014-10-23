@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: Issue Archive
+*/
+
+get_header(); ?>
 
 <?php if ( is_active_sidebar( 'main_left' ) ) : ?>
 	<div class="mainSidebarLeft widget-area" role="complementary">

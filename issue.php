@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Forecast Page
+Template Name: Issue Page
 */
 
 php get_header(); ?>

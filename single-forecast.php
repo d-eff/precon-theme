@@ -27,10 +27,24 @@
  		<?php echo(get_post_meta($post->ID, "Community", true)); ?>
  	</div>
 
+ 	<?php if(is_user_logged_in()) {
+ 			global $current_user;
+ 			get_currentuserinfo();
+ 			$tid = get_the_ID();
+ 			$time = get_post_time('U', true);
+
+ 			custom_vote_function($tid, $current_user->user_level, $time); 
+ 		}
+ 	?>
+	
+
+
+
 	</article>
 <?php endwhile; else : ?>
 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+
 </div>
 
 
