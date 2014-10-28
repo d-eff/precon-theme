@@ -7,7 +7,7 @@
 <?php endif; ?>
 
 <div class="normalpageFeed">
-<div class="headlineBox"><h3 class="columnTitle">Current Issues</h3></div>
+<div class="headlineBox"><h3 class="columnTitle">Current Forecasts</h3></div>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<article class="mainPost">

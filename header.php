@@ -36,8 +36,8 @@
 		<ul class="mainMenu">
 			<li><a href="/">HOME</a></li>
 			<li><a href="/forecast">FORECASTS</a></li>
-			<li><a href="/issues">ISSUES</a></li>
-			<li><a href="/country-analysis">COUNTRIES</a></li>
+			<li><a href="/issue">ISSUES</a></li>
+			<li><a href="/Country">COUNTRIES</a></li>
 			<li><a href="#">TRENDS</a></li>
 			<li class="rightItem"><a href="#">WHAT WE DO</a></li>
 			<li class="rightItem"><a href="#">WHO WE ARE</a></li>

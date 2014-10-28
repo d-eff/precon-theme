@@ -8,7 +8,6 @@
 
 <div class="normalpageFeed">
 <div class="headlineBox"><h3 class="columnTitle">Country Analysis</h3></div>
-adsasdd
 <?php build_i_world_map(2); ?>
 
 </div>
