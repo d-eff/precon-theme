@@ -31,9 +31,9 @@
  			global $current_user;
  			get_currentuserinfo();
  			$tid = get_the_ID();
- 			$time = get_post_time('U', true);
+ 			$intime = get_post_time('U', false);
 
- 			custom_vote_function($tid, $current_user->user_level, $time); 
+ 			custom_vote_function($tid, $current_user->user_level, $intime); 
  		}
  	?>
 	
