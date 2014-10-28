@@ -19,6 +19,10 @@
 
  		<h3>House Analysis</h3>
  		<?php echo(get_post_meta($post->ID, "House", true)); ?>
+ 		<div class="voteData">
+ 			<?php getData($post->ID); ?>
+ 		</div>
+ 		<div id="test1"></div>
 
  		<h3>Expert Analysis</h3>
  		<?php echo(get_post_meta($post->ID, "Expert", true)); ?>
@@ -36,6 +40,7 @@
  			custom_vote_function($tid, $current_user->user_level, $intime); 
  		}
  	?>
+ 	<svg id="visualisation" width="500" height="300"></svg>
 	
 
 
