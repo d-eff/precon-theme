@@ -20,15 +20,24 @@
  		<h3>House Analysis</h3>
  		<?php echo(get_post_meta($post->ID, "House", true)); ?>
  		<div class="voteData">
- 			<?php getData($post->ID); ?>
+ 			<?php getData($post->ID, 'admin'); ?>
  		</div>
+ 		<svg id="visualisation0" width="500" height="300"></svg>
  		<div id="test1"></div>
 
  		<h3>Expert Analysis</h3>
  		<?php echo(get_post_meta($post->ID, "Expert", true)); ?>
+ 		<div class="voteData">
+ 			<?php getData($post->ID, 'auth'); ?>
+ 		</div>
+ 		<svg id="visualisation1" width="500" height="300"></svg>
 
  		<h3>Community Analysis</h3>
  		<?php echo(get_post_meta($post->ID, "Community", true)); ?>
+ 		<div class="voteData">
+ 			<?php getData($post->ID, 'sub'); ?>
+ 		</div>
+ 		<svg id="visualisation2" width="500" height="300"></svg>
  	</div>
 
  	<?php if(is_user_logged_in()) {
@@ -40,7 +49,7 @@
  			custom_vote_function($tid, $current_user->user_level, $intime); 
  		}
  	?>
- 	<svg id="visualisation" width="500" height="300"></svg>
+
 	
 
 
