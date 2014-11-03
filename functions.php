@@ -1,10 +1,6 @@
 <?php
 
 
-
-
-
-
 //INITIALIZATION
 if ( ! function_exists('precon_setup') ):
   
@@ -31,8 +27,8 @@ function precon_initialize_theme_options() {
     // First, we register a section. This is necessary since all future options must belong to one. 
     add_settings_section(
         'general_settings_section',         // ID used to identify this section and with which to register options
-        'Policy Recon Options',                  // Title to be displayed on the administration page
-        'precon_general_options_callback', // Callback used to render the description of the section
+        'Policy Recon Options',             // Title to be displayed on the administration page
+        'precon_general_options_callback',  // Callback used to render the description of the section
         'general'                           // Page on which to add this section of options
     );
      
@@ -56,6 +52,19 @@ function precon_initialize_theme_options() {
 } 
 endif;
 add_action('admin_init', 'precon_initialize_theme_options');
+
+/* ------------------------------------------------------------------------ *
+ * The Excerpt stuff
+ * ------------------------------------------------------------------------ */
+function custom_excerpt_length( $length ) {
+    return 70;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function precon_excerpt_more( $more ) {
+    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+}
+add_filter( 'excerpt_more', 'precon_excerpt_more' );
 
 
 
@@ -111,6 +120,15 @@ function precon_widgets_init() {
 		'before_title' => '<h4 class="widgetTitle">',
 		'after_title' => '</h4>',
 	) );
+
+    register_sidebar( array(
+        'name' => 'Footer Widget Area',
+        'id' => 'footer_widgets',
+        'before_widget' => '<div class="footer_widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="footerWidgetTitle">',
+        'after_title' => '</h4>',
+    ) );
 }
 add_action( 'widgets_init', 'precon_widgets_init' );
 
@@ -122,5 +140,19 @@ function precon_scripts() {
 	
 }
 add_action( 'wp_enqueue_scripts', 'precon_scripts' );
+
+/* ------------------------------------------------------------------------ *
+ * Menus!
+ * ------------------------------------------------------------------------ */
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' ),
+      'social-menu' => __( 'Social Links' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
 
 

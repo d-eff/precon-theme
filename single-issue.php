@@ -24,6 +24,24 @@
 	</article>
 
 <?php $thispost = $post->ID; ?>
+
+<!--Forecasts list-->
+<h1>Related Forecasts</h1>
+<?php $post_categories = wp_get_post_categories( $post->ID );
+foreach ($post_categories as $key => $value): ?>
+<?php $rand_post = new WP_query();
+$rand_post->query('post_type=question&cat='.$value);
+
+while($rand_post->have_posts()): $rand_post->the_post();?>
+<?php if((get_post_type() != 'post')&&($post->ID != $thispost)): ?>
+	<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<?php endif; ?>
+<?php endwhile;
+wp_reset_query(); ?>
+<?php endforeach; ?>
+<!--end forecasts-->
+
+<!--Discussion-->
 <h1>Discussion</h1>
 <?php $post_categories = wp_get_post_categories( $post->ID );
 foreach ($post_categories as $key => $value): ?>
@@ -37,24 +55,7 @@ while($rand_post->have_posts()): $rand_post->the_post();?>
 <?php endwhile; ?>
 <?php wp_reset_query(); ?>
 <?php endforeach; ?>
-
-<h1>Issues</h1>
-<?php $post_categories = wp_get_post_categories( $post->ID );
-foreach ($post_categories as $key => $value): ?>
-<?php $rand_post = new WP_query();
-$rand_post->query('post_type=question&cat='.$value);
-
-while($rand_post->have_posts()): $rand_post->the_post();?>
-<?php if((get_post_type() != 'post')&&($post->ID != $thispost)): ?>
-	<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-<?php endif; ?>
-<?php endwhile;
-wp_reset_query(); ?>
-<?php endforeach; ?>
-
-
-
-
+<!--End discussion-->
 </div>
 
 

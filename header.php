@@ -18,7 +18,7 @@
 		<?php if(!is_user_logged_in()): ?>
 			<a href="#" class="login">LOGIN</a>
 		<?php else: ?>
-			<a href="<?php echo wp_logout_url(home_url()); ?>" class="login">LOGOUT</a>
+			<a href="<?php echo wp_logout_url(home_url()); ?>" class="logout">LOGOUT</a>
 		<?php endif; ?>
 
 		<div class="loginForm"><?php wp_login_form(); ?></div>
@@ -32,16 +32,10 @@
 		<div class="searchForm"><?php get_search_form(); ?></div>
 	</div>
   </header>  
-  	<menu class="mainMenuWrap">
-		<ul class="mainMenu">
-			<li><a href="/">HOME</a></li>
-			<li><a href="/forecast">FORECASTS</a></li>
-			<li><a href="/issue">ISSUES</a></li>
-			<li><a href="/Country">COUNTRIES</a></li>
-			<li><a href="#">TRENDS</a></li>
-			<li class="rightItem"><a href="#">WHAT WE DO</a></li>
-			<li class="rightItem"><a href="#">WHO WE ARE</a></li>
-		
-		</ul>
-	</menu>
+  	<nav class="mainMenuWrap">
+		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 
+								'container' => false,
+								'menu_class' => 'mainMenu'
+		) ); ?>
+	</nav>
   <div class="main">

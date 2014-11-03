@@ -102,16 +102,32 @@ body {
 
 .loginForm {
 	display: none;
-	background-color: #FFFFFF;
+	background-color: #DDDDDD;
 	z-index: 10;
 	position: absolute;
 	top: 20px;
 	right: 0;
+	padding: 10px;
+	border: 1px solid #CCCCCC;
+	color: #777777;
+	font-size: 12px;
+	border-radius: 3px;
 }
-.login {
+
+.loginForm p {
+	margin: 4px 0;
+}
+
+.loginForm input {
+	padding: 2px;
+	border: none;
+}
+
+.login, .logout {
 	color: #FFFFFF;
 	font-size: 0.8125rem;
 }
+
 .searchform {
 	position: absolute;
 	bottom: -1px;
@@ -156,6 +172,7 @@ body {
 .mainMenu {
 	background-color: #DDDDDD;
 	border: 1px solid #554C64;
+	font-size: 0; /*to deal with inline-block padding issue*/
 }
 .mainMenu li {
 	display: inline-block;
@@ -163,14 +180,17 @@ body {
 }
 .mainMenu a {
 	color: #777777;
-	padding: 4px 15px;
+	padding: 8px 18px;
 	display: inline-block;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-left: none !important; /*bah*/
 }
 .mainMenu a:hover {
 	color: #000000;
 	background-color: #8BAABF;
 }
-li.rightItem {
+.mainMenu :nth-last-child(-n+2) {
 	float: right;
 	border-right: none;
 	border-left: 1px solid #554C64; 
@@ -193,7 +213,7 @@ li.rightItem {
 .homepageFeed {
 	display: inline-block;
 	width: 47%;
-	margin: 0 20px;
+	margin: 0 2.5%;
 }
 
 .headlineBox {
@@ -218,20 +238,51 @@ li.rightItem {
 	color: #666666;
 	font-weight: bold;
 }
+.postTitle a:hover {
+	color: #AAAAAA;
+}
+.postInfo a { 
+	color: #888888;
+	font-weight: bold;
+}
+.postInfo a:hover {
+	color: #AAAAAA;
+}
+.entry {
+	margin: 25px 0 15px;
+}
+.entry p {
+	margin: 10px 0;
+}
+.avatar {
+	float: left;
+	margin: 0 10px 0 0;
+	border: 2px solid #DDDDDD;
+}
+.postCategories {
+	background-color: #EEEEEE;
+	padding: 4px;
+}
+.postCategories a {
+	color: #000000;
+}
+.postCategories a:hover {
+	color: #999999;
+}
+.read-more {
+	display: block;
+	margin: 5px 0 10px;
+	color: #777777;
+	font-weight: bold;
+}
+
 
 /*WIDGETS*/
 .widgetWrap {
 	margin: 0 0 20px;
 	background-color: #F9F9FF;
 	border-radius: 1px;
-}
-.widgetWrap a {
-	font-size: 0.8125rem;
-	padding: 2px 8px;
-	display: inline-block;
-	border-left: 7px solid #CCCCCC;
-	margin: 1px 6px;
-	color: #000000;
+	overflow: hidden;
 }
 
 .widgetTitle {
@@ -240,7 +291,28 @@ li.rightItem {
 	padding: 4px 5px;
 	font-size: 1.4rem;
 }
-
+.widgetWrap ul {
+	border-left: 1px solid #DDDDDD;
+	overflow: hidden;
+	border-bottom: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+	padding: 3px 0 8px;
+}
+.widgetWrap li {
+	margin: 2px 0;	
+} 
+.widgetWrap a {
+	font-size: 0.8125rem;
+	padding: 2px 8px;
+	display: inline-block;
+	border-left: 7px solid #CCCCCC;
+	margin: 1px 6px;
+	color: #000000;
+}
+.widgetWrap a:hover {
+	border-left: 7px solid #666666;
+	color: #AAAAAA;
+}
 
 
 /*FOOTER*/
@@ -249,17 +321,35 @@ li.rightItem {
 	color: #FFFFFF;
 	padding: 10px 20px;
 	overflow: hidden;
+	clear: both;
 }
-.pageFooter p {
+.copyright {
 	display: inline-block;
-	width: 50%;
+	width: 100%;
 	margin-top: 10px;
 	font-size: 0.8125rem;
+	text-align: center;
+	color: #777777;
 }
 .footerMenu {
 	float:right;
-
 }
+.footerWidgets {
+	display: inline-block;
+	width: 80%;
+}
+.footer_widget {
+	width: 31%;
+	display: inline-block;
+	margin: 0 2% 0 0;
+	vertical-align: top;
+	font-size: 13px;
+}
+.footerWidgetTitle {
+	margin: 0 0 4px;
+}
+
+
 
 /*PAGE TEMPLATE */
 .normalpageFeed {
@@ -275,3 +365,14 @@ li.rightItem {
 	visibility: hidden;
 }
 
+
+@media (max-width: 800px) {
+	.mainSidebarLeft, .mainSidebarRight {
+		float: left;
+	}
+	.homepageFeed {
+		float: right;
+		margin: 0 0 0 2.5%;
+		width: 73%;
+	}
+}
