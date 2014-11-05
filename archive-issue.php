@@ -18,10 +18,12 @@ get_header(); ?>
 	<article class="mainPost">
 	<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 	
-
+	<?php $excerpt = get_post_meta( $post->ID, 'excerpt', true ); 
+	if(!empty($excerpt)): ?>
  	<div class="entry">
- 		<?php the_content(); ?>
+ 		<?php echo $excerpt; ?>
  	</div>
+ <?php endif; ?>
 
 	</article>
 <?php endwhile; else : ?>

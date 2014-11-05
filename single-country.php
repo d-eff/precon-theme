@@ -32,6 +32,7 @@
 			<li><a href="#<?php echo $title.$count; ?>"><?php echo $title ?></a></li>
 		<?php $count += 1;
 		endforeach; ?>
+		<li><a href="#discussion">Discussion</a></li>
 	</ul>
 
 
@@ -60,7 +61,7 @@ foreach ($post_categories as $key => $value): ?>
 <?php endforeach; ?>
 
 
-<h1>Discussion</h1>
+<h1 id="discussion">Discussion</h1>
 <?php $post_categories = wp_get_post_categories( $post->ID );
 	foreach ($post_categories as $key => $value): ?>
 

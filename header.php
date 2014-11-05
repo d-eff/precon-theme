@@ -15,6 +15,7 @@
 	</div>
 	<h4 class="siteByline"><?php if(get_option('site_byline')): echo(get_option('site_byline')); endif; ?></h4>
 	<div class="headerRight">
+		<?php wp_register('', ''); ?> | 
 		<?php if(!is_user_logged_in()): ?>
 			<a href="#" class="login">LOGIN</a>
 		<?php else: ?>
