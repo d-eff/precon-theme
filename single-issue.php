@@ -30,7 +30,7 @@
 <?php $post_categories = wp_get_post_categories( $post->ID );
 foreach ($post_categories as $key => $value): ?>
 <?php $rand_post = new WP_query();
-$rand_post->query('post_type=question&cat='.$value);
+$rand_post->query('post_type=forecast&cat='.$value);
 
 while($rand_post->have_posts()): $rand_post->the_post();?>
 <?php if((get_post_type() != 'post')&&($post->ID != $thispost)): ?>
