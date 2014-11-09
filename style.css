@@ -67,7 +67,7 @@ body {
 
 
 .contentWrap {
-  max-width: 1024px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -168,6 +168,7 @@ body {
 
 .mainMenuWrap {
 	margin: 3px 0 0;
+	overflow: hidden;
 }
 .mainMenu {
 	background-color: #DDDDDD;
@@ -200,7 +201,7 @@ body {
 
 .main {
 	margin: 10px 0;
-
+	overflow: hidden;
 }
 
 .mainSidebarLeft,
@@ -351,21 +352,38 @@ body {
 	margin: 0 0 4px;
 }
 
+/*FORECASTS */
+.forecast {
+	clear: both;
+	overflow: hidden;
+	margin: 20px 0;
+}
+.forecastTitle {
 
+}
+.forecastContent {
+	float: left;
+	width: 55%;
+
+}
+.voteData {
+	visibility: hidden;
+}
+.forecastGraph {
+	float: right;
+
+}
 
 /*PAGE TEMPLATE */
 .normalpageFeed {
 	width: 73%;
 	display: inline-block;
-	margin: 0 0 0 25px;
+	float: right;
 }
 .normalpageFeed .entry {
 	margin: 20px 0;
 }
 
-.voteData {
-	visibility: hidden;
-}
 
 
 @media (max-width: 800px) {

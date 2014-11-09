@@ -16,22 +16,29 @@
 
  	<div class="entry">
  		<?php the_content(); ?>
-
- 		<h3>House Analysis</h3>
- 		<?php echo(get_post_meta($post->ID, "House", true)); ?>
- 		<div class="voteData" data-votes="<?php getData($post->ID, 'admin'); ?>"></div>
- 		<svg id="visualisation0" width="300" height="200"></svg>
- 		<div id="test1"></div>
-
- 		<h3>Expert Analysis</h3>
- 		<?php echo(get_post_meta($post->ID, "Expert", true)); ?>
- 		<div class="voteData" data-votes="<?php getData($post->ID, 'auth'); ?>"></div>
- 		<svg id="visualisation1" width="300" height="200"></svg>
-
- 		<h3>Community Analysis</h3>
- 		<?php echo(get_post_meta($post->ID, "Community", true)); ?>
- 		<div class="voteData" data-votes="<?php getData($post->ID, 'sub'); ?>"></div>
- 		<svg id="visualisation2" width="300" height="200"></svg>
+ 		<div class="forecast">
+	 		<div class="forecastContent">
+	 			<h3 class="forecastTitle">House Analysis</h3>
+	 			<?php echo(get_post_meta($post->ID, "House", true)); ?>
+	 		</div>
+	 		<div class="voteData" data-votes="<?php getData($post->ID, 'admin'); ?>"></div>
+	 		<svg id="visualisation0" class="forecastGraph" width="300" height="200"></svg>
+ 		</div>
+ 		<div class="forecast">
+	 		<div class="forecastContent">
+	 			<h3 class="forecastTitle">Expert Analysis</h3>
+	 			<?php echo(get_post_meta($post->ID, "Expert", true)); ?></div>
+	 		<div class="voteData" data-votes="<?php getData($post->ID, 'auth'); ?>"></div>
+	 		<svg id="visualisation1" class="forecastGraph" width="300" height="200"></svg>
+ 		</div>
+ 		<div class="forecast">
+	 		
+	 		<div class="forecastContent">
+	 			<h3 class="forecastTitle">Community Analysis</h3>
+	 			<?php echo(get_post_meta($post->ID, "Community", true)); ?></div>
+	 		<div class="voteData" data-votes="<?php getData($post->ID, 'sub'); ?>"></div>
+	 		<svg id="visualisation2" class="forecastGraph" width="300" height="200"></svg>
+	 	</div>
  	</div>
 
  	<?php if(is_user_logged_in()) {
