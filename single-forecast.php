@@ -1,10 +1,20 @@
 <?php get_header(); ?>
 
-<?php if ( is_active_sidebar( 'main_left' ) ) : ?>
+
 	<div class="mainSidebarLeft widget-area" role="complementary">
+		 	<?php if(is_user_logged_in()) {
+ 			global $current_user;
+ 			get_currentuserinfo();
+ 			$tid = get_the_ID();
+ 			$intime = get_post_time('U', false);
+ 			custom_vote_function($tid, $current_user->user_level, $intime, $current_user->user_ID); 
+ 		}
+ 	?>
+ 	<?php if ( is_active_sidebar( 'main_left' ) ) : ?>
 		<?php dynamic_sidebar( 'main_left' ); ?>
-	</div>
+
 <?php endif; ?>
+	</div>
 
 <div class="normalpageFeed">
 <div class="headlineBox"><h3 class="columnTitle">Forecast</h3></div>
@@ -40,20 +50,6 @@
 	 		<svg id="visualisation2" class="forecastGraph" width="300" height="200"></svg>
 	 	</div>
  	</div>
-
- 	<?php if(is_user_logged_in()) {
- 			global $current_user;
- 			get_currentuserinfo();
- 			$tid = get_the_ID();
- 			$intime = get_post_time('U', false);
-
- 			custom_vote_function($tid, $current_user->user_level, $intime, $current_user->user_ID); 
- 		}
- 	?>
-
-	
-
-
 
 	</article>
 <?php endwhile; else : ?>

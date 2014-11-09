@@ -38,9 +38,6 @@ get_header(); ?>
 		</ul>
 		<?php endforeach; ?>	
 
-
-
-
 		<p>By Type:</p>
 		<?php $taxons = array(
 				'category'
