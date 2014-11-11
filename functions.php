@@ -66,7 +66,16 @@ function precon_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'precon_excerpt_more' );
 
-
+/* ------------------------------------------------------------------------ *
+ * Use front page cat on front page
+ * ------------------------------------------------------------------------ */
+function category_for_homepage( $query ) {
+    $homepage_cat = get_cat_ID('Front page');
+    if($homepage_cat && $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'cat', $homepage_cat );
+    }
+}
+add_action( 'pre_get_posts', 'category_for_homepage' );
 
 /* ------------------------------------------------------------------------ *
  * Section Callbacks
