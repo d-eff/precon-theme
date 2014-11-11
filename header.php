@@ -39,4 +39,3 @@
 								'menu_class' => 'mainMenu'
 		) ); ?>
 	</nav>
-  <div class="main">

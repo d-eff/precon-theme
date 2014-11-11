@@ -1,4 +1,4 @@
- </div>
+
   <footer class="pageFooter">
   	
 <?php if ( is_active_sidebar( 'footer_widgets' ) ) : ?>

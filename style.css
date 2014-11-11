@@ -69,6 +69,7 @@ body {
 .contentWrap {
   max-width: 85%;
   margin: 0 auto;
+  min-width: 800px;
 }
 
 /*HEADER*/
@@ -199,22 +200,37 @@ body {
 
 
 
-.main {
+.main, .subpage {
 	margin: 10px 0;
+	min-height: 1024px;
 	overflow: hidden;
+	padding-left: 245px;
+}
+.main {
+	padding-right: 245px;	
 }
 
 .mainSidebarLeft,
 .mainSidebarRight {
-	display: inline-block;
-	width: 24%;
+	float: left;
+	position: relative;
+	width: 245px;
 	vertical-align: top;
+}
+.mainSidebarLeft {
+	right: 245px;
+	margin-left: -100%;
+}
+.mainSidebarRight {
+	margin-right: -245px; 
 }
 
 .homepageFeed {
-	display: inline-block;
-	width: 47%;
-	margin: 0 2.5%;
+	box-sizing: border-box;
+	float: left;
+	padding: 0 12px;
+	position: relative;
+	width: 100%;
 }
 
 .headlineBox {
@@ -376,23 +392,13 @@ body {
 
 /*PAGE TEMPLATE */
 .normalpageFeed {
-	width: 73%;
-	display: inline-block;
-	float: right;
+	box-sizing: border-box;
+	float: left;
+	padding: 0 0 0 12px;
+	position: relative;
+	width: 100%;
 }
 .normalpageFeed .entry {
 	margin: 20px 0;
 }
 
-
-
-@media (max-width: 800px) {
-	.mainSidebarLeft, .mainSidebarRight {
-		float: left;
-	}
-	.homepageFeed {
-		float: right;
-		margin: 0 0 0 2.5%;
-		width: 73%;
-	}
-}
