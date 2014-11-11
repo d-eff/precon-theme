@@ -54,7 +54,7 @@ endif;
 add_action('admin_init', 'precon_initialize_theme_options');
 
 /* ------------------------------------------------------------------------ *
- * The Excerpt stuff
+ * Homepage Excerpt stuff
  * ------------------------------------------------------------------------ */
 function custom_excerpt_length( $length ) {
     return 70;
@@ -83,7 +83,7 @@ function precon_general_options_callback() {
 function precon_byline_callback($args) {
      
     // Note the ID and the name attribute of the element match that of the ID in the call to add_settings_field
-    $html = '<input type="text" id="site_byline" name="site_byline"/>'; 
+    $html = '<input type="text" id="site_byline" name="site_byline" value="' . get_option('site_byline') . '"/>'; 
      
     // Here, we will take the first argument of the array and add it to a label next to the checkbox
     $html .= '<label for="site_byline"> '  . $args[0] . '</label>'; 
@@ -154,5 +154,3 @@ function register_my_menus() {
   );
 }
 add_action( 'init', 'register_my_menus' );
-
-
