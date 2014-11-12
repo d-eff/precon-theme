@@ -19,18 +19,22 @@ window.onload = function() {
 					more = entry.querySelector('.read-more'),
 					less = entry.querySelector('.read-less');
 
-				more.addEventListener('click', function(e){
-					e.preventDefault();
-					excerpt.style.height = "0";
-					full.style.height = "100%";
-				});
+				if(more) {
+					more.addEventListener('click', function(e){
+						e.preventDefault();
+						excerpt.style.height = "0";
+						full.style.height = "100%";
+					});
+				}
 
-				less.addEventListener('click', function(e){
-					e.preventDefault();
-					excerpt.style.height = "100%";
-					full.style.height = "0";
+				if(less) {
+					less.addEventListener('click', function(e){
+						e.preventDefault();
+						excerpt.style.height = "100%";
+						full.style.height = "0";
 
-				});
+					});
+				}
 			})()
 			
 		}
