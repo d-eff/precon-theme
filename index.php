@@ -10,8 +10,12 @@
 			<small class="postInfo"><?php the_author_posts_link(); ?> | <?php the_time('F jS, Y'); ?></small>
 
 		 	<div class="entry">
+		 		<div class="excerpt">
+		 			<?php the_excerpt(); ?>
+		 		</div>
 		 		<div class="full">
-		 			<?php the_post(); ?>
+		 			<?php the_content(); ?>
+		 			<a href="#" class="read-less">Read Less</a>
 		 		</div>
 		 	</div>
 			<div class="postCategories">Categories: <?php the_category(', '); ?></div>

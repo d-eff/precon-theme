@@ -271,6 +271,12 @@ body {
 .entry p {
 	margin: 10px 0;
 }
+.excerpt, .full {
+	overflow: hidden;
+}
+.full {
+	height: 0;
+}
 .avatar {
 	float: left;
 	margin: 0 10px 0 0;
@@ -286,7 +292,7 @@ body {
 .postCategories a:hover {
 	color: #999999;
 }
-.read-more {
+.read-more, .read-less {
 	display: block;
 	margin: 5px 0 10px;
 	color: #777777;
