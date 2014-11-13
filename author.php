@@ -4,7 +4,7 @@
 	<div class="homepageFeed">
 	<?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));?>
 		<div class="headlineBox"><h3 class="columnTitle">
-			<?php echo $curauth->display_name; ?>
+			Posts by <?php echo $curauth->display_name; ?>
 			</h3></div>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="mainPost">
@@ -52,4 +52,3 @@
 </div>
 
 <?php get_footer(); ?>
-
