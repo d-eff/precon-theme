@@ -18,7 +18,6 @@
 		 			<a href="#" class="read-less">Read Less</a>
 		 		</div>
 		 	</div>
-			<div class="postCategories">Categories: <?php the_category(', '); ?></div>
 		</article>
 	<?php endwhile; else : ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

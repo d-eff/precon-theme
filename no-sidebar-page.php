@@ -1,8 +1,11 @@
-<?php get_header(); ?>
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: No Sidebar Page
+*/
+get_header(); ?>
 
-<div class="subpage">
-	<div class="normalpageFeed">
+<div class="subpage-noSidebar">
+	<div class="noSidebarPage">
 	<div class="headlineBox"><h3 class="columnTitle"><?php the_title(); ?></h3></div>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -17,11 +20,6 @@
 	<?php endif; ?>
 	</div>
 
-	<?php if ( is_active_sidebar( 'main_left' ) ) : ?>
-		<div class="mainSidebarLeft widget-area" role="complementary">
-			<?php dynamic_sidebar( 'main_left' ); ?>
-		</div>
-	<?php endif; ?>
 </div>
 
 <?php get_footer(); ?>

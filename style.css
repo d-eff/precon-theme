@@ -91,7 +91,6 @@ body {
 }
 .siteTitleWrap {
 	display: inline-block;
-	width: 28%;
 	vertical-align: top;
 	text-align: center;
 	margin: 5px 0 0;
@@ -149,7 +148,6 @@ body {
 }
 .headerRight {
 	display: inline-block;
-	width: 30%;
 	vertical-align: top;
 	text-align: right;
 	float: right;
@@ -408,3 +406,23 @@ body {
 	margin: 20px 0;
 }
 
+.subpage-noSidebar {
+	margin: 10px 0;
+	background: #A6A6CE;
+}
+.noSidebarPage {
+	box-sizing: border-box;
+	padding: 0 20px;
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	background: white;
+	height: 100%;
+}
+
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}

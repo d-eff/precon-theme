@@ -1,7 +1,4 @@
 <?php 
-/*
-Template Name: Issue Archive
-*/
 
 get_header(); ?>
 
