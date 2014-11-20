@@ -62,9 +62,6 @@
 			case 'forecast':
 				$forecasts[] = $post;
 				break;
-			case 'post':
-				$discussions[] = $post;
-				break;
 		}
 	endwhile;
 	wp_reset_query(); ?>
@@ -81,8 +78,21 @@
 		<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
 		<?php wp_reset_postdata();
 	endforeach; ?>
-	<h1 id="discussion">Discussion</h1>
-
+	<!--Discussion-->
+	<h1>Discussion</h1>
+	<?php $value = get_cat_ID($thisCat);
+	$args = array('post_type' => 'country',
+					'cat' => $value);
+	$rand_post = new WP_query($args);
+	while($rand_post->have_posts()):
+		$rand_post->the_post();
+		if(get_post_type() == 'post'):
+			get_template_part( 'content', 'article' );
+		endif;
+	
+	endwhile;
+	wp_reset_query(); ?>
+	<!--End discussion-->
 
 	</div>
 
