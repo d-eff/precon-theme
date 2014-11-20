@@ -49,7 +49,7 @@
 	<!-- Get forecasts -->
 	<h1>Related Forecasts</h1>
 	<?php $value = get_cat_ID($thisCat);
-		$args = array('post_type' => 'country',
+		$args = array('post_type' => 'forecast',
 						'cat' => $value);
 		$rand_post = new WP_query($args);
 		while($rand_post->have_posts()):
