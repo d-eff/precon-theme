@@ -18,47 +18,64 @@
 	<?php endif; ?>
 		</article>
 
-	<?php $thispost = $post->ID; ?>
+	<?php $thispost = $post->ID; 
+		$country_cat = get_cat_ID('country');
+		$thisCat = $post->post_name;
+	?>
 
-	<!--Forecasts list-->
+	<!--list countries this issue is tagged with-->
+	<h1>Related Countries</h1>
+	<?php $post_categories = wp_get_post_categories($post->ID);
+	foreach ($post_categories as $key => $value):
+		//have to do this to check parent
+		$this_cat = get_category($value);
+		if($this_cat->category_parent == $country_cat):
+			//if it's a country category, get the countries with that cat
+			$args = array('post_type' => 'country',
+							'cat' => $value);
+			$rand_post = new WP_query($args);
+			while($rand_post->have_posts()):
+				$rand_post->the_post();
+				if(get_post_type() == 'country'):?>
+					<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<?php endif;
+			
+			endwhile;
+			wp_reset_query();
+		endif;
+	endforeach; ?>
+	<!-- end janky country list-->
+
+	<!-- Get forecasts -->
 	<h1>Related Forecasts</h1>
-	<?php $post_categories = wp_get_post_categories( $post->ID );
-	foreach ($post_categories as $key => $value): ?>
-	<?php $rand_post = new WP_query();
-	$rand_post->query('post_type=forecast&cat='.$value);
-
-	while($rand_post->have_posts()): $rand_post->the_post();?>
-	<?php if((get_post_type() != 'post')&&($post->ID != $thispost)): ?>
-		<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-	<?php endif; ?>
-	<?php endwhile;
-	wp_reset_query(); ?>
-	<?php endforeach; ?>
-	<!--end forecasts-->
+	<?php $value = get_cat_ID($thisCat);
+		$args = array('post_type' => 'country',
+						'cat' => $value);
+		$rand_post = new WP_query($args);
+		while($rand_post->have_posts()):
+			$rand_post->the_post();
+			if(get_post_type() == 'forecast'):?>
+				<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			<?php endif;
+		
+		endwhile;
+		wp_reset_query();
+	?>
 
 	<!--Discussion-->
 	<h1>Discussion</h1>
-	<?php $post_categories = wp_get_post_categories( $post->ID );
-	foreach ($post_categories as $key => $value): ?>
-
-	<?php $rand_post = new WP_query();
-	$rand_post->query('post_type=post&cat=' . $value);
-	while($rand_post->have_posts()): $rand_post->the_post();?>
-	<?php if((get_post_type() == 'post')&&($post->ID != $thispost)): ?>
-		<article class="mainPost">
-			<?php echo get_avatar( get_the_author_meta( 'ID' ), 48 ); ?> 
-			<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-			<small class="postInfo"><?php the_author_posts_link(); ?> | <?php the_time('F jS, Y'); ?></small>
-
-		 	<div class="entry">
-		 		<?php the_excerpt(); ?>
-		 	</div>
-			<div class="postCategories">Categories: <?php the_category(', '); ?></div>
-		</article>
-	<?php endif; ?>
-	<?php endwhile; ?>
-	<?php wp_reset_query(); ?>
-	<?php endforeach; ?>
+	<?php $value = get_cat_ID($thisCat);
+	$args = array('post_type' => 'country',
+					'cat' => $value);
+	$rand_post = new WP_query($args);
+	while($rand_post->have_posts()):
+		$rand_post->the_post();
+		if(get_post_type() == 'post'):
+			get_template_part( 'content', 'article' );
+		endif;
+	
+	endwhile;
+	wp_reset_query(); ?>
 	<!--End discussion-->
 	</div>
 

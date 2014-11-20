@@ -56,35 +56,6 @@ get_header(); ?>
 			</ul>
 			<?php endforeach; ?>	
 
-			<p>By Type:</p>
-			<?php $taxons = array(
-					'category'
-				);
-				$regions_cat = get_cat_ID('event type');
-				$args = array(
-					'hide_empty' => false,
-					'child_of' => $regions_cat
-					);
-				$sub_categories = get_terms($taxons, $args);
-			foreach ($sub_categories as $cat => $catstuff): ?>
-			<p><?php echo $catstuff->name; ?></p>
-			<ul>
-				<?php $args = array(
-					'category'		   => $catstuff->term_id,
-					'orderby'          => 'post_date',
-					'order'            => 'DESC',
-					'post_type'        => 'issue',
-					'post_status'      => 'publish' ); 
-				$postlist = get_posts($args);
-				foreach($postlist as $post): 
-					if($post->post_type == 'issue'):
-					setup_postdata($post);  ?>
-					<li><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-				<?php endif; ?>
-				<?php endforeach;
-				wp_reset_postdata(); ?>
-			</ul>
-			<?php endforeach; ?>	
 		</div>
 		<?php if ( is_active_sidebar( 'main_left' ) ) {
 			dynamic_sidebar( 'main_left' ); 
