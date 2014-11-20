@@ -9,7 +9,7 @@
 
 	<div class="mainSidebarLeft widget-area" role="complementary">
 		<div class="widgetWrap">
-			<h4 class="widgetTitle">Issues</h4>
+			<h4 class="widgetTitle">Countries</h4>
 			<p>By Region:</p>
 			<?php $taxons = array(
 					'category'
