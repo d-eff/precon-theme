@@ -44,7 +44,8 @@ get_header(); ?>
 					'orderby'          => 'post_date',
 					'order'            => 'DESC',
 					'post_type'        => 'issue',
-					'post_status'      => 'publish' ); 
+					'posts_per_page'   => -1,
+					'post_status'      => 'publish'); 
 				$postlist = get_posts($args);
 				foreach($postlist as $post): 
 					if($post->post_type == 'issue'):

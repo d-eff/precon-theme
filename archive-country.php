@@ -27,6 +27,7 @@
 					'orderby'          => 'post_date',
 					'order'            => 'DESC',
 					'post_type'        => 'country',
+					'posts_per_page'   => -1,
 					'category'		   => $catstuff->term_id
 					));
 				foreach($postlist as $post):
