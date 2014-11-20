@@ -163,3 +163,23 @@ function register_my_menus() {
   );
 }
 add_action( 'init', 'register_my_menus' );
+
+
+/* ------------------------------------------------------------------------ *
+ * Roles!
+ * ------------------------------------------------------------------------ */
+function change_role_name() {
+    global $wp_roles;
+
+    if ( ! isset( $wp_roles ) )
+        $wp_roles = new WP_Roles();
+
+    //You can list all currently available roles like this...
+    //$roles = $wp_roles->get_names();
+    //print_r($roles);
+
+    //You can replace "administrator" with any other role "editor", "author", "contributor" or "subscriber"...
+    $wp_roles->roles['administrator']['name'] = 'Owner';
+    $wp_roles->role_names['administrator'] = 'Owner';           
+}
+add_action('init', 'change_role_name');
