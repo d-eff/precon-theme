@@ -249,7 +249,7 @@ body {
 	margin: 8px 0 5px;
 }
 .postTitle a {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: #666666;
 	font-weight: bold;
 }
@@ -342,9 +342,11 @@ body {
 .pageFooter {
 	background-color: #AFAFAF;
 	color: #FFFFFF;
+	clear: both;
+	line-height: 1.2;
 	padding: 10px 20px;
 	overflow: hidden;
-	clear: both;
+	min-width:800px;
 }
 .copyright {
 	display: inline-block;

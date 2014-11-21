@@ -2,15 +2,13 @@
 
 <div class="subpage">
 	<div class="normalpageFeed">
-	<div class="headlineBox"><h3 class="columnTitle">Country Analysis</h3></div>
 	<?php build_i_world_map(2); ?>
 
 	</div>
 
 	<div class="mainSidebarLeft widget-area" role="complementary">
 		<div class="widgetWrap">
-			<h4 class="widgetTitle">Countries</h4>
-			<p>By Region:</p>
+			<h4 class="widgetTitle">By Region</h4>
 			<?php $taxons = array(
 					'category'
 				);
