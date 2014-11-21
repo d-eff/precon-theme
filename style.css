@@ -339,6 +339,31 @@ body {
 	color: #AAAAAA;
 }
 
+.regionMenuContent {
+	display: none;
+}
+.regionMenuLabel {
+	background-color: #666699;
+	display: block;
+	margin: 2px 0;
+	overflow: hidden;
+	padding: 4px;
+	width: 100%;
+}
+.regionMenuLabel:before {
+	content: '+';
+	color: white;
+	font-weight: bold;
+	padding: 0 5px 0 0;
+}
+.regionMenuBox {
+	opacity: 0;
+	position: absolute;
+}
+.regionMenuBox:checked + .regionMenuContent {
+	display: block;
+}
+
 
 /*FOOTER*/
 .pageFooter {

@@ -18,9 +18,10 @@
 					'child_of' => $regions_cat
 					);
 				$sub_categories = get_terms($taxons, $args);
-			foreach ($sub_categories as $cat => $catstuff): ?>
-			<p><?php echo $catstuff->name; ?></p>
-			<ul>
+			foreach ($sub_categories as $cat => $catstuff): ?> 
+				<label class="regionMenuLabel" for="<?php echo $catstuff->slug; ?>"><?php echo $catstuff->name; ?></label>
+				<input class="regionMenuBox" type="checkbox" id="<?php echo $catstuff->slug; ?>" name="<?php echo $catstuff->slug; ?>">
+			<ul class="regionMenuContent">
 				<?php $postlist = get_posts(array(
 					'orderby'          => 'post_date',
 					'order'            => 'DESC',
