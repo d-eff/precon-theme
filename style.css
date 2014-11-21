@@ -271,6 +271,14 @@ body {
 .entry p {
 	margin: 10px 0;
 }
+.entry blockquote {
+	background-color: #e4e4e4;
+	border: solid 1px #e1e1e1;
+	color: #555555;
+	margin: 10px auto;
+	padding: 0 5px;
+	width: 90%;
+}
 .excerpt, .full {
 	overflow: hidden;
 }
