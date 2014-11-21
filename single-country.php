@@ -49,7 +49,8 @@
 	$forecasts = array();
 	$discussions = array();
 	$args = array('post_type' => 'country',
-					'cat' => $value);
+					'cat' => $value,
+					'posts_per_page' => -1);
 	$rand_post = new WP_query($args);
 	while($rand_post->have_posts()):
 		$rand_post->the_post();
