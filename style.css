@@ -344,6 +344,7 @@ body {
 }
 .regionMenuLabel {
 	background-color: #666699;
+	cursor: pointer;
 	display: block;
 	margin: 2px 0;
 	overflow: hidden;
