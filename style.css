@@ -195,7 +195,9 @@ body {
 	border-right: none;
 	border-left: 1px solid #554C64; 
 }
-
+.current-menu-item {
+	background-color: #AAAAAA;
+}
 
 
 .main, .subpage {
@@ -416,7 +418,7 @@ body {
 	box-sizing: border-box;
 	padding: 0 20px;
 	position: relative;
-	max-width: 800px;
+	max-width: 740px;
 	margin: 0 auto;
 	background: white;
 	height: 100%;
