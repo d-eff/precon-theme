@@ -174,12 +174,13 @@ function change_role_name() {
     if ( ! isset( $wp_roles ) )
         $wp_roles = new WP_Roles();
 
-    //You can list all currently available roles like this...
-    //$roles = $wp_roles->get_names();
-    //print_r($roles);
+    $wp_roles->roles['author']['name'] = 'Expert (post)';
+    $wp_roles->role_names['author'] = 'Expert (post)';           
 
-    //You can replace "administrator" with any other role "editor", "author", "contributor" or "subscriber"...
-    $wp_roles->roles['administrator']['name'] = 'Owner';
-    $wp_roles->role_names['administrator'] = 'Owner';           
+    $wp_roles->roles['contributor']['name'] = 'Expert (no post)';
+    $wp_roles->role_names['contributor'] = 'Expert (no post)';     
+
+    $wp_roles->roles['subscriber']['name'] = 'Registered Usercd';
+    $wp_roles->role_names['subscriber'] = 'Registered User';                 
 }
 add_action('init', 'change_role_name');
