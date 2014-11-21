@@ -324,11 +324,11 @@ body {
 	padding: 3px 0 8px;
 }
 .widgetWrap li {
-	margin: 2px 0;	
+	margin: 0;	
 } 
 .widgetWrap a {
 	font-size: 0.8125rem;
-	padding: 2px 8px;
+	padding: 0px 8px;
 	display: inline-block;
 	border-left: 7px solid #CCCCCC;
 	margin: 1px 6px;
