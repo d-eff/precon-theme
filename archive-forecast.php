@@ -6,7 +6,7 @@
 	<div class="headlineBox"><h3 class="columnTitle">Current Forecasts</h3></div>
 
 
-		<p>By Region:</p>
+		<p class="regionListTitle">By Region:</p>
 			<?php $taxons = array(
 					'category'
 				);
@@ -16,9 +16,11 @@
 					'child_of' => $regions_cat
 					);
 				$sub_categories = get_terms($taxons, $args);
+				$count = 0;
 			foreach ($sub_categories as $cat => $catstuff): ?>
-			<p><?php echo $catstuff->name; ?></p>
-			<ul>
+			<div class="forecastRegionSection">
+			<p class="forecastRegionTitle"><?php echo $catstuff->name; ?></p>
+			<ul class="forecastRegionList">
 				<?php $postlist = get_posts(array(
 					'orderby'          => 'post_date',
 					'order'            => 'DESC',
@@ -27,13 +29,13 @@
 					'category'		   => $catstuff->term_id
 					));
 				foreach($postlist as $post):
-					if($post->post_type == 'forecast') :
 					setup_postdata($post); ?>
-					<li><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-					<?php endif; ?>
-				<?php endforeach;
-				wp_reset_postdata(); ?>
+					<li class="<?php $count % 2 == 0 ? print 'evenForecast' : print 'oddForecast'?>"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+				<?php $count++;
+				wp_reset_postdata(); 
+				endforeach; ?>
 			</ul>
+			</div>
 			<?php endforeach; ?>	
 	</div>
 

@@ -62,13 +62,15 @@
 		endforeach; ?>
 
 		<?php if(!empty($countries)): ?>
+		<div class="relatedWrap relatedCountries">
 			<h1>Related Countries</h1>
 			<?php foreach ($countries as $apost): ?>
 				<?php setup_postdata($apost); ?>
-				<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+				<h2 class="relatedTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
 				<?php wp_reset_postdata();
-			endforeach; 
-		endif; ?>
+			endforeach; ?>
+		</div>
+		<?php endif; ?>
 
 
 		<?php $post_categories = wp_get_post_categories($post->ID);
@@ -92,13 +94,15 @@
 		endforeach; ?>
 
 		<?php if(!empty($issues)): ?>
+		<div class="relatedWrap relatedIssues">
 		<h1>Related Issues</h1>
 			<?php foreach ($issues as $apost): ?>
 				<?php setup_postdata($apost); ?>
-				<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+				<h2 class="relatedTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
 				<?php wp_reset_postdata();
-			endforeach; 
-		endif; ?>
+			endforeach; ?>
+		</div>
+		<?php endif; ?>
 
 	</div>
 

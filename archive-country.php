@@ -30,10 +30,8 @@
 					'category'		   => $catstuff->term_id
 					));
 				foreach($postlist as $post):
-					if($post->post_type == 'country') :
 					setup_postdata($post); ?>
 					<li><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-					<?php endif; ?>
 				<?php endforeach;
 				wp_reset_postdata(); ?>
 			</ul>

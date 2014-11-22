@@ -6,11 +6,8 @@
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="mainPost">
-		
-		
-
 	 	<div class="entry">
-	 		<h1>Background</h1>
+	 		<h1 class="singleIssueTitle">Background</h1>
 	 		<?php the_content(); ?>
 	 	</div>
 	 	<?php endwhile; else : ?>
@@ -44,13 +41,15 @@
 	endforeach; ?>
 
 	<?php if(!empty($countries)): ?>
+	<div class="relatedWrap relatedCountries">
 		<h1>Related Countries</h1>
 		<?php foreach ($countries as $apost): ?>
 			<?php setup_postdata($apost); ?>
-			<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+			<h2 class="relatedTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
 			<?php wp_reset_postdata();
-		endforeach; 
-	endif; ?>
+		endforeach; ?>
+	</div>
+	<?php endif; ?>
 	<!-- end country list-->
 
 	<!-- Get forecasts -->
@@ -60,12 +59,14 @@
 						'posts_per_page' => -1);
 		$rand_post = new WP_query($args);
 		if($rand_post->have_posts()): ?>
+			<div class="relatedWrap relatedForecasts">
 			<h1>Related Forecasts</h1>
 			<?php while($rand_post->have_posts()):
 				$rand_post->the_post(); ?>
-				<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-			<?php endwhile;
-		endif; 
+				<h2 class="relatedTitle relatedForecastTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			<?php endwhile; ?>
+			</div>
+		<?php endif; 
 		wp_reset_query(); ?>
 
 	<!--Discussion-->
@@ -75,12 +76,14 @@
 					'posts_per_page' => -1);
 	$rand_post = new WP_query($args);
 	if($rand_post->have_posts()): ?>
+		<div class="relatedWrap relatedDiscussions">
 		<h1>Discussion</h1>
 		<?php while($rand_post->have_posts()):
 			$rand_post->the_post();
 			get_template_part( 'content', 'article' );
-		endwhile;
-	endif;
+		endwhile; ?>
+		</div>
+	<?php endif;
 	wp_reset_query(); ?>
 	<!--End discussion-->
 	</div>

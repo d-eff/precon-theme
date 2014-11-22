@@ -12,7 +12,7 @@ get_header(); ?>
 			
 			<?php $excerpt = get_post_meta( $post->ID, 'excerpt', true ); 
 			if(!empty($excerpt)): ?>
-		 	<div class="entry">
+		 	<div class="countryListExcerpt">
 		 		<?php echo $excerpt; ?>
 		 	</div>
 		 <?php endif; ?>
