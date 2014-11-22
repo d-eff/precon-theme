@@ -37,13 +37,13 @@
 	 	</div>
 
 		</article>
-	<?php endwhile; else : ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-	<?php endif; ?>
+		<?php endwhile; else : ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>
 
-	<h1>Related Countries</h1>
 		<?php $post_categories = wp_get_post_categories($post->ID);
 		$country_cat = get_cat_ID('country');
+		$countries = array();
 		foreach ($post_categories as $key => $value):
 			//have to do this to check parent
 			$this_cat = get_category($value);
@@ -55,19 +55,25 @@
 				$rand_post = new WP_query($args);
 				while($rand_post->have_posts()):
 					$rand_post->the_post();
-					if(get_post_type() == 'country'):?>
-						<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-					<?php endif;
-				
+					$countries[] = $post;
 				endwhile;
 				wp_reset_query();
 			endif;
 		endforeach; ?>
 
+		<?php if(!empty($countries)): ?>
+			<h1>Related Countries</h1>
+			<?php foreach ($countries as $apost): ?>
+				<?php setup_postdata($apost); ?>
+				<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+				<?php wp_reset_postdata();
+			endforeach; 
+		endif; ?>
 
-		<h1>Related Issues</h1>
+
 		<?php $post_categories = wp_get_post_categories($post->ID);
 		$issue_cat = get_cat_ID('issue');
+		$issues = array();
 		foreach ($post_categories as $key => $value):
 			//have to do this to check parent
 			$this_cat = get_category($value);
@@ -79,14 +85,21 @@
 				$rand_post = new WP_query($args);
 				while($rand_post->have_posts()):
 					$rand_post->the_post();
-					if(get_post_type() == 'issue'):?>
-						<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-					<?php endif;
-				
+					$issues[] = $post;
 				endwhile;
 				wp_reset_query();
 			endif;
 		endforeach; ?>
+
+		<?php if(!empty($issues)): ?>
+		<h1>Related Issues</h1>
+			<?php foreach ($issues as $apost): ?>
+				<?php setup_postdata($apost); ?>
+				<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+				<?php wp_reset_postdata();
+			endforeach; 
+		endif; ?>
+
 	</div>
 
 	<div class="mainSidebarLeft widget-area" role="complementary">

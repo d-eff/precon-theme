@@ -24,8 +24,8 @@
 	?>
 
 	<!--list countries this issue is tagged with-->
-	<h1>Related Countries</h1>
 	<?php $post_categories = wp_get_post_categories($post->ID);
+	$countries = array();
 	foreach ($post_categories as $key => $value):
 		//have to do this to check parent
 		$this_cat = get_category($value);
@@ -37,47 +37,50 @@
 			$rand_post = new WP_query($args);
 			while($rand_post->have_posts()):
 				$rand_post->the_post();
-				if(get_post_type() == 'country'):?>
-					<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				<?php endif;
-			
+				$countries[] = $post;
 			endwhile;
 			wp_reset_query();
 		endif;
 	endforeach; ?>
-	<!-- end janky country list-->
+
+	<?php if(!empty($countries)): ?>
+		<h1>Related Countries</h1>
+		<?php foreach ($countries as $apost): ?>
+			<?php setup_postdata($apost); ?>
+			<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+			<?php wp_reset_postdata();
+		endforeach; 
+	endif; ?>
+	<!-- end country list-->
 
 	<!-- Get forecasts -->
-	<h1>Related Forecasts</h1>
 	<?php $value = get_cat_ID($thisCat);
 		$args = array('post_type' => 'forecast',
 						'cat' => $value,
-				'posts_per_page' => -1);
+						'posts_per_page' => -1);
 		$rand_post = new WP_query($args);
-		while($rand_post->have_posts()):
-			$rand_post->the_post();
-			if(get_post_type() == 'forecast'):?>
+		if($rand_post->have_posts()): ?>
+			<h1>Related Forecasts</h1>
+			<?php while($rand_post->have_posts()):
+				$rand_post->the_post(); ?>
 				<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-			<?php endif;
-		
-		endwhile;
-		wp_reset_query();
-	?>
+			<?php endwhile;
+		endif; 
+		wp_reset_query(); ?>
 
 	<!--Discussion-->
-	<h1>Discussion</h1>
 	<?php $value = get_cat_ID($thisCat);
-	$args = array('post_type' => 'country',
+	$args = array('post_type' => 'post',
 					'cat' => $value,
 					'posts_per_page' => -1);
 	$rand_post = new WP_query($args);
-	while($rand_post->have_posts()):
-		$rand_post->the_post();
-		if(get_post_type() == 'post'):
+	if($rand_post->have_posts()): ?>
+		<h1>Discussion</h1>
+		<?php while($rand_post->have_posts()):
+			$rand_post->the_post();
 			get_template_part( 'content', 'article' );
-		endif;
-	
-	endwhile;
+		endwhile;
+	endif;
 	wp_reset_query(); ?>
 	<!--End discussion-->
 	</div>

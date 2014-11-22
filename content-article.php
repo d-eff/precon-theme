@@ -1,9 +1,11 @@
 <?php
 ?>
 <article class="mainPost">
-	<?php echo get_avatar( get_the_author_meta( 'ID' ), 48 ); ?> 
-	<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-	<small class="postInfo"><?php the_author_posts_link(); ?> | <?php the_time('F jS, Y'); ?></small>
+	<div class="postMeta">
+		<?php echo get_avatar( get_the_author_meta( 'ID' ), 48 ); ?> 
+		<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<small class="postInfo"><?php the_author_posts_link(); ?> | <?php the_time('F jS, Y'); ?></small>
+	</div>
 
  	<div class="entry">
  		<div class="excerpt">

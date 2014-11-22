@@ -12,12 +12,12 @@
 	 		<h1>Background</h1>
 	 		<?php the_content(); ?>
 	 	</div>
-	 	<?php endwhile; else : ?>
+ 	 	<?php endwhile; else : ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 	<?php endif; ?> 
 	</article>
 	<?php $thispost = $post->ID;
-			$thisCat = $post->post_name
+			$thisCat = $post->post_title;
 	?>
 
 	<?php $infoboxes = get_post_meta( $thispost, 'info_boxes', true ); 
@@ -47,15 +47,13 @@
 	<?php $value = get_cat_ID($thisCat);
 	$issues = array();
 	$forecasts = array();
-	$discussions = array();
-	$args = array('post_type' => 'country',
-					'cat' => $value,
-					'posts_per_page' => -1);
+	$args = array( 'cat' => $value,
+					'post_type' => array('forecast', 'issue'),
+				   'posts_per_page' => -1);
 	$rand_post = new WP_query($args);
 	while($rand_post->have_posts()):
 		$rand_post->the_post();
 		$ptype = get_post_type();
-
 		switch($ptype) {
 			case 'issue':
 				$issues[] = $post;
@@ -67,32 +65,39 @@
 	endwhile;
 	wp_reset_query(); ?>
 
-	<h1>Related Issues</h1>
-	<?php foreach ($issues as $apost): ?>
-		<?php setup_postdata($apost); ?>
-		<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
-		<?php wp_reset_postdata();
-	endforeach; ?>
-	<h1>Related Forecasts</h1>
-	<?php foreach ($forecasts as $apost): ?>
-		<?php setup_postdata($apost); ?>
-		<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
-		<?php wp_reset_postdata();
-	endforeach; ?>
+	<!--Issues-->
+	<?php if(!empty($issues)): ?>
+		<h1>Related Issues</h1>
+		<?php foreach ($issues as $apost): ?>
+			<?php setup_postdata($apost); ?>
+			<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+			<?php wp_reset_postdata();
+		endforeach; 
+	endif; ?>
+
+	<!--Forecasts-->
+	<?php if(!empty($forecasts)): ?>
+		<h1>Related Forecasts</h1>
+		<?php foreach ($forecasts as $apost): ?>
+			<?php setup_postdata($apost); ?>
+			<h2 class="postTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+			<?php wp_reset_postdata();
+		endforeach; 
+	endif; ?>
+
 	<!--Discussion-->
-	<h1>Discussion</h1>
 	<?php $value = get_cat_ID($thisCat);
-	$args = array('post_type' => 'country',
+	$args = array('post_type' => 'post',
 					'cat' => $value,
 					'posts_per_page' => -1);
 	$rand_post = new WP_query($args);
-	while($rand_post->have_posts()):
+	if($rand_post->have_posts()): ?>
+	<h1>Discussion</h1>
+	<?php while($rand_post->have_posts()):
 		$rand_post->the_post();
-		if(get_post_type() == 'post'):
-			get_template_part( 'content', 'article' );
-		endif;
-	
+		get_template_part( 'content', 'article' );
 	endwhile;
+	endif;
 	wp_reset_query(); ?>
 	<!--End discussion-->
 
