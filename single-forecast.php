@@ -63,10 +63,10 @@
 
 		<?php if(!empty($countries)): ?>
 		<div class="relatedWrap relatedCountries">
-			<h1>Related Countries</h1>
+			<h1 class="relatedWrapTitle">Related Countries</h1>
 			<?php foreach ($countries as $apost): ?>
 				<?php setup_postdata($apost); ?>
-				<h2 class="relatedTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+				<h2 class="relatedItemTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
 				<?php wp_reset_postdata();
 			endforeach; ?>
 		</div>
@@ -95,10 +95,10 @@
 
 		<?php if(!empty($issues)): ?>
 		<div class="relatedWrap relatedIssues">
-		<h1>Related Issues</h1>
+		<h1 class="relatedWrapTitle">Related Issues</h1>
 			<?php foreach ($issues as $apost): ?>
 				<?php setup_postdata($apost); ?>
-				<h2 class="relatedTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+				<h2 class="relatedItemTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
 				<?php wp_reset_postdata();
 			endforeach; ?>
 		</div>

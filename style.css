@@ -63,7 +63,14 @@ body {
 	font-family: tahoma, arial, sans-serif;
 	font-size: 16px;
 }
+/*END RESET*/
 
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
 
 .contentWrap {
   max-width: 85%;
@@ -376,7 +383,6 @@ body {
 	display: block;
 }
 
-
 /*FOOTER*/
 .pageFooter {
 	background-color: #AFAFAF;
@@ -413,31 +419,6 @@ body {
 	margin: 0 0 4px;
 }
 
-/*FORECASTS */
-.forecast {
-	border: 2px solid #F2EEEF;
-	clear: both;
-	margin: 10px 0;
-	overflow: hidden;
-}
-.forecastTitle {
-	background-color: #E4E1E6;
-	padding: 2px 0 2px 10px;
-
-}
-.forecastContent {
-	float: left;
-	padding: 0 0 0 3px;
-	width: 55%;
-}
-.voteData {
-	visibility: hidden;
-}
-.forecastGraph {
-	float: right;
-
-}
-
 /*PAGE TEMPLATE */
 .normalpageFeed {
 	box-sizing: border-box;
@@ -464,13 +445,52 @@ body {
 	height: 100%;
 }
 
-strong {
-	font-weight: bold;
-}
-em {
-	font-style: italic;
+/*SHARED*/
+.relatedWrap {
+	background-color: #DDDDDD;
+	margin: 8px 0;
+	padding: 5px;
 }
 
+/*FORECAST PAGES */
+.forecast {
+	border: 2px solid #F2EEEF;
+	clear: both;
+	margin: 10px 0;
+	overflow: hidden;
+}
+.forecastTitle {
+	background-color: #E4E1E6;
+	padding: 2px 0 2px 10px;
+
+}
+.forecastContent {
+	float: left;
+	padding: 0 0 0 3px;
+	width: 55%;
+}
+.voteData {
+	visibility: hidden;
+}
+.forecastGraph {
+	float: right;
+}
+.forecastRegionSection {
+	margin: 10px 0;
+}
+.forecastRegionTitle {
+	font-weight: bold;
+}
+.evenForecast,
+.oddForecast {
+	margin: 2px 0;
+	padding: 2px;
+}
+.evenForecast {
+	background-color: #DDDDDD;
+}
+
+/*COUNTRY PAGES */
 .countryInfoBox {
 	border: 2px solid #F2EEEF;
   background-color: #FFFFFF;
@@ -493,3 +513,9 @@ em {
 .infoBoxMenu {
 	font-size: .8em;
 }
+
+/*ISSUE PAGES*/
+.singleIssueTitle {
+	font-size: 1.3rem;
+}
+
