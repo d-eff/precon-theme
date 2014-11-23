@@ -35,8 +35,21 @@ window.onload = function() {
 
 					});
 				}
-			})()
+			})();
 			
+		}
+	}
+
+	var regions = document.querySelectorAll('.regionMenuLabel');
+	if(regions.length > 0) {
+		for(var x = 0; x < regions.length; ++x) {
+			(function(x){
+				regions[x].addEventListener('click', function(e){
+					e.preventDefault();
+					var next = regions[x].nextElementSibling;
+					next.style.display = next.style.display === 'none' ? 'block' : 'none';
+				});
+			})(x);
 		}
 	}
 }
