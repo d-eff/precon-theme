@@ -92,7 +92,8 @@ em {
 }
 .siteTitle a {
 	font-size: 3.2rem;
-	color: #ffffff;
+	font-family: helvetica;
+	color: #FFFFFF;
 	margin: 0 0 8px;
 }
 .siteTitleWrap {
@@ -150,6 +151,7 @@ em {
 	width: 20%;
 	vertical-align: top;
 	font-size: 0.8125rem;
+	font-style: italic;
 	margin-top: 37px;
 }
 .headerRight {
@@ -279,15 +281,15 @@ em {
 	margin: 10px 0 5px;
 }
 .entry p {
-	margin: 10px 0;
+	margin: 0px 0;
 }
 .entry blockquote {
-	background-color: #e4e4e4;
-	border: solid 1px #e1e1e1;
+	background-color: #f6f6f6;
+	border: solid 1px #f6f6f6;
 	color: #555555;
 	margin: 10px auto;
-	padding: 0 5px;
-	width: 90%;
+	padding: 0 5px 0 5px;
+	width:85%;
 }
 .excerpt, .full {
 	overflow: hidden;
@@ -312,7 +314,7 @@ em {
 }
 .read-more, .read-less {
 	display: block;
-	margin: 5px 0 10px;
+	margin: 0px 0 0px 0;
 	color: #777777;
 	font-weight: bold;
 }
@@ -444,11 +446,23 @@ a.regionMenuLabel:hover {
 }
 
 /*SHARED*/
-.relatedWrap {
-	background-color: #DDDDDD;
-	margin: 8px 0;
+
+
+.relatedWrap.relatedCountries {
+	background-color: #FAe4e4;
+	margin: 0 60px 5px 0;
 	padding: 5px;
 }
+
+.relatedWrap.relatedIssues {
+	background-color: #F0FBE5;
+	margin: 0 60px 5px 0;
+	padding: 5px;}
+
+.relatedWrap.relatedForecasts {
+	background-color: #E5FBFB;
+	margin: 0 60px 5px 0;
+	padding: 5px;}
 
 /*FORECAST PAGES */
 .forecast {
@@ -485,19 +499,19 @@ a.regionMenuLabel:hover {
 	padding: 2px;
 }
 .evenForecast {
-	background-color: #DDDDDD;
+	background-color: #F3F3F3;
 }
 
 /*COUNTRY PAGES */
 .countryInfoBox {
 	border: 2px solid #F2EEEF;
-  background-color: #FFFFFF;
+  	background-color: #FFFFFF;
 	margin: 0 60px 5px 0;
 	font-size: .8em;
 }
 
 .countryInfoBoxTitle {
-	background-color: #E4E1E6;
+	background-color: #F2EEEF;
 	font-size: 1.1em;
 	font-weight: ;
 	padding: 2px 0 2px 10px;
@@ -516,4 +530,3 @@ a.regionMenuLabel:hover {
 .singleIssueTitle {
 	font-size: 1.3rem;
 }
-
