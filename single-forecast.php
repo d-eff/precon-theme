@@ -113,6 +113,9 @@
  			$tid = get_the_ID();
  			$intime = get_post_time('U', false);
  			custom_vote_function($tid, $current_user->user_level, $intime, $current_user->user_ID); 
+ 		} else {
+ 			notlogged_form();
+
  		}
  	?>
  	<?php if ( is_active_sidebar( 'main_left' ) ) : ?>

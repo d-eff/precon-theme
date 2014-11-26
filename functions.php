@@ -108,6 +108,13 @@ function category_for_homepage( $query ) {
 }
 add_action( 'pre_get_posts', 'category_for_homepage' );
 
+function archive_postcount( $query ) {
+    if(!$query->is_home() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', -1 );
+    }
+}
+add_action( 'pre_get_posts', 'archive_postcount' );
+
 /* ------------------------------------------------------------------------ *
  * Section Callbacks
  * ------------------------------------------------------------------------ */
