@@ -5,8 +5,8 @@
 	<div class="headlineBox"><h3 class="columnTitle"><?php the_title(); ?></h3></div>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<article class="mainPost">
-	 	<div class="entry">
+		<article class="mainPost singleIssuePost">
+	 	<div class="entry singleIssueEntry">
 	 		<h1 class="singleIssueTitle">Background</h1>
 	 		<?php the_content(); ?>
 	 	</div>

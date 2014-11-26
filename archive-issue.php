@@ -7,8 +7,8 @@ get_header(); ?>
 		<div class="headlineBox"><h3 class="columnTitle">Current Issues</h3></div>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<article class="mainPost">
-			<h2 class="postTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			<article class="mainPost issueArchivePost">
+			<h2 class="postTitle issueArchivePostTitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			
 			<?php $excerpt = get_post_meta( $post->ID, 'excerpt', true ); 
 			if(!empty($excerpt)): ?>

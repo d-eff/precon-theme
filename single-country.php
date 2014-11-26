@@ -6,9 +6,9 @@
 	<div class="headlineBox"><h3 class="columnTitle"><?php the_title(); ?></h3></div>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<article class="mainPost">
+		<article class="mainPost singleCountryPost">
 
-	 	<div class="entry">
+	 	<div class="entry singleCountryEntry">
 	 		<h1 class="singleCountryTitle">Background</h1>
 	 		<?php the_content(); ?>
 	 	</div>
