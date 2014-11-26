@@ -213,21 +213,28 @@ em {
 	margin: 10px 0;
 	min-height: 800px;
 	overflow: hidden;
-	padding-left: 245px;
+	padding-left: 210px;
 }
 .main {
 	padding-right: 245px;	
 }
 
-.mainSidebarLeft,
+.mainSidebarLeft {
+	float: left;
+	position: relative;
+	width: 210px;
+	vertical-align: top;
+}
+
 .mainSidebarRight {
 	float: left;
 	position: relative;
 	width: 245px;
 	vertical-align: top;
 }
+
 .mainSidebarLeft {
-	right: 245px;
+	right: 210px;
 	margin-left: -100%;
 }
 .mainSidebarRight {
@@ -265,22 +272,34 @@ em {
 }
 .postTitle a {
 	font-size: 1.1rem;
-	color: #666666;
+	color: #000000;
 }
 .postTitle a:hover {
-	color: #AAAAAA;
+	color: #000FDD;
+	text-decoration: underline;
 }
 .postInfo a { 
 	color: #888888;
-	font-weight: bold;
+	font-weight: ;
 }
 .postInfo a:hover {
 	color: #AAAAAA;
 }
 .entry {
-	margin: 10px 0 5px;
+	margin: 5px 0 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #F2EEEF;
+	padding: 0px;
 }
+
+.singleCountryTitle {
+	padding: 2px 0 2px 10px;
+	background-color: #F2EEEF;
+}
+
 .entry p {
+	padding: 5px;
 	margin: 0px 0;
 }
 .entry blockquote {
@@ -288,7 +307,7 @@ em {
 	border: solid 1px #f6f6f6;
 	color: #555555;
 	margin: 10px auto;
-	padding: 0 5px 0 5px;
+	padding: 5px 5px 5px 5px;
 	width:85%;
 }
 .excerpt, .full {
@@ -299,9 +318,15 @@ em {
 }
 .avatar {
 	float: left;
-	margin: 0 10px 0 0;
-	border: 2px solid #DDDDDD;
+	margin: 10px 5px 0 0;
+	border: 1px solid #DDDDDD;
 }
+
+img.avatar.avatar-48 {
+  max-width: 35px;
+  max-height: 35px;
+}
+
 .postCategories {
 	background-color: #EEEEEE;
 	padding: 4px;
@@ -315,8 +340,8 @@ em {
 .read-more, .read-less {
 	display: block;
 	margin: 0px 0 0px 0;
-	color: #777777;
-	font-weight: bold;
+	color: #C40000;
+	font-weight: ;
 }
 .current {
 	font-weight: bold;
@@ -325,7 +350,7 @@ em {
 /*WIDGETS*/
 .widgetWrap {
 	margin: 0 0 20px;
-	background-color: #F9F9FF;
+	background-color: #F9F9F9;
 	border-radius: 1px;
 	overflow: hidden;
 }
@@ -334,7 +359,7 @@ em {
 	background-color: #A6A6CE;
 	color: #FFFFFF;
 	padding: 4px 5px;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 .widgetWrap ul {
 	border-left: 1px solid #DDDDDD;
@@ -348,7 +373,7 @@ em {
 } 
 .widgetWrap a {
 	font-size: 0.8125rem;
-	padding: 0px 8px;
+	padding: 0 0 0 5px;
 	display: inline-block;
 	border-left: 7px solid #CCCCCC;
 	margin: 1px 6px;
@@ -449,20 +474,24 @@ a.regionMenuLabel:hover {
 
 
 .relatedWrap.relatedCountries {
-	background-color: #FAe4e4;
+	background-color: #F3F3F3;
 	margin: 0 60px 5px 0;
 	padding: 5px;
 }
 
 .relatedWrap.relatedIssues {
-	background-color: #F0FBE5;
+	background-color: #F3F3F3;
 	margin: 0 60px 5px 0;
 	padding: 5px;}
 
 .relatedWrap.relatedForecasts {
-	background-color: #E5FBFB;
+	background-color: #F3F3F3;
 	margin: 0 60px 5px 0;
 	padding: 5px;}
+
+.relatedWrapTitle {
+	font-size: .8em
+}
 
 /*FORECAST PAGES */
 .forecast {
@@ -484,6 +513,14 @@ a.regionMenuLabel:hover {
 .voteData {
 	visibility: hidden;
 }
+
+p.voteInstr {
+	color: #4c4c66;
+	font-size: 85%;
+	padding: 5px 5px 10px 5px;
+
+}
+
 .forecastGraph {
 	float: right;
 }
@@ -528,5 +565,11 @@ a.regionMenuLabel:hover {
 
 /*ISSUE PAGES*/
 .singleIssueTitle {
-	font-size: 1.3rem;
+	font-size: 12px;
+}
+
+
+.simple-links-item.simple-links-widget-item {
+	padding: 0px 0px 10px 0px;
+
 }
