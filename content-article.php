@@ -14,10 +14,12 @@
  		<div class="full">
  			<?php the_content(); ?>
  			<p><a href="#" class="read-less">Read Less</a></p>
- 			<span st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>' class='st_twitter'></span>
-			<span class='st_facebook' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
-			<span st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>' class='st_linkedin'></span>
-			<span class='st_email' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+ 			<p class="no-break">
+	 			<span st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>' class='st_twitter'></span>
+				<span class='st_facebook' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+				<span st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>' class='st_linkedin'></span>
+				<span class='st_email' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+			</p>
  		</div>
  	</div>
 </article>
