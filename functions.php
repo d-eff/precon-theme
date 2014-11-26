@@ -211,7 +211,7 @@ function change_role_name() {
     $wp_roles->roles['contributor']['name'] = 'Expert (no post)';
     $wp_roles->role_names['contributor'] = 'Expert (no post)';     
 
-    $wp_roles->roles['subscriber']['name'] = 'Registered Usercd';
+    $wp_roles->roles['subscriber']['name'] = 'Registered User';
     $wp_roles->role_names['subscriber'] = 'Registered User';                 
 }
 add_action('init', 'change_role_name');

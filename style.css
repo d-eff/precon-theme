@@ -107,6 +107,12 @@ em {
 	border: 3px solid #CCCCCC;
 }
 
+.registrationLink a {
+	color: #FFFFFF;
+	font-size: 0.825rem;
+	text-transform: uppercase;
+}
+
 .loginForm {
 	display: none;
 	background-color: #DDDDDD;
@@ -262,7 +268,7 @@ em {
 	font-family: tahoma, arial, sans-serif;
 	font-size: 0.8125rem;
 	line-height: 1.2;
-	margin: 0 0 10px;
+	margin: 0 0 30px;
 }
 .postMeta {
 	overflow: hidden;
@@ -317,16 +323,12 @@ em {
 	height: 0;
 }
 .avatar {
+	border: 1px solid #DDDDDD;
 	float: left;
 	margin: 10px 5px 0 0;
-	border: 1px solid #DDDDDD;
-}
-
-img.avatar.avatar-48 {
   max-width: 35px;
   max-height: 35px;
 }
-
 .postCategories {
 	background-color: #EEEEEE;
 	padding: 4px;
@@ -341,7 +343,6 @@ img.avatar.avatar-48 {
 	display: block;
 	margin: 0px 0 0px 0;
 	color: #C40000;
-	font-weight: ;
 }
 .current {
 	font-weight: bold;
