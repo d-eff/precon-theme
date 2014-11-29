@@ -293,10 +293,6 @@ em {
 .postInfo a:hover {
 	color: #AAAAAA;
 }
-.entry {
-
-}
-
 .entry.singlePostEntry {
 	margin: 0px 0 5px;
 	padding: 0px;
@@ -311,7 +307,7 @@ em {
 }
 
 .entry.singleCountryEntry {
-	margin: 0px;
+	margin: 20px 0;
 	padding: 0px;
 	border-style: solid;
 	border-width: 2px;
@@ -329,7 +325,7 @@ em {
 }
 
 .entry.singleIssueEntry {
-	margin: 0px;
+	margin: 20px 0 0;
 	padding: 0px;
 	border-style: solid;
 	border-width: 1px;
@@ -486,9 +482,6 @@ a.regionMenuLabel:hover {
 	position: relative;
 	width: 100%;
 }
-.normalpageFeed .entry {
-	margin: 20px 0;
-}
 
 .subpage-noSidebar {
 	margin: 10px 0;
@@ -530,6 +523,7 @@ a.regionMenuLabel:hover {
 .relatedWrapTitle {
 	font-size: .8em
 }
+
 
 /*FORECAST PAGES */
 
@@ -640,4 +634,22 @@ p.voteInstr {
 .simple-links-item.simple-links-widget-item {
 	padding: 0px 0px 10px 0px;
 
+}
+
+/*COMMENTS*/
+.comment {
+	margin: 15px;
+	padding: 5px;
+	font-size: 14px;
+}
+.comment.odd {
+	background-color: lightsteelblue;
+}
+.comment-respond {
+	background-color: lightgrey;
+	font-size: 14px;
+	padding: 10px;
+}
+.comment-form-comment label{
+	display: block;
 }
