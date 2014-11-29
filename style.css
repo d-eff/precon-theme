@@ -269,6 +269,7 @@ em {
 	font-size: 0.8125rem;
 	line-height: 1.2;
 	margin: 0 0 30px;
+	overflow: hidden;
 }
 .postMeta {
 	overflow: hidden;

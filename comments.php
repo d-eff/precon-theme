@@ -52,7 +52,8 @@ if ( post_password_required() ) {
 	<?php endif; // have_comments() ?>
 
 	<?php comment_form(array(
-		'comment_notes_after' => ''
+		'comment_notes_after' => '',
+		'logged_in_as' => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>.' ), admin_url( 'profile.php' ), $user_identity ) . '</p>'
 	)); ?>
 
 </div><!-- #comments -->
