@@ -272,9 +272,11 @@ em {
 }
 .postMeta {
 	overflow: hidden;
+	background: #EBF3FF;
+	padding: 5px;
 }
 .postTitle {
-	margin: 8px 0 5px;
+	margin: 0px 0 2px;
 }
 .postTitle a {
 	font-size: 1.1rem;
@@ -292,21 +294,52 @@ em {
 	color: #AAAAAA;
 }
 .entry {
-	margin: 5px 0 5px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #F2EEEF;
+
+}
+
+.entry.singlePostEntry {
+	margin: 0px 0 5px;
 	padding: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #F1D0A9;
 }
 
 .singleCountryTitle {
 	padding: 2px 0 2px 10px;
-	background-color: #F2EEEF;
+	background-color: #EAEAEA;
 }
 
+.entry.singleCountryEntry {
+	margin: 0px;
+	padding: 0px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: #EAEAEA;
+}
+
+.mainPost.singleCountryPost {
+	margin: 0px;
+}
+
+.singleIssueTitle {
+	padding: 2px 0 2px 10px;
+	background-color: #EAEAEA;
+}
+
+.entry.singleIssueEntry {
+	margin: 0px;
+	padding: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: #EAEAEA;
+}
 .entry p {
 	padding: 5px;
 	margin: 0px 0;
+
 }
 .entry blockquote {
 	background-color: #f6f6f6;
@@ -325,7 +358,7 @@ em {
 .avatar {
 	border: 1px solid #DDDDDD;
 	float: left;
-	margin: 10px 5px 0 0;
+	margin: 0px 5px 0 0;
   max-width: 35px;
   max-height: 35px;
 }
@@ -477,17 +510,21 @@ a.regionMenuLabel:hover {
 .relatedWrap.relatedCountries {
 	background-color: #F3F3F3;
 	margin: 0 60px 5px 0;
+	border-left: 20px solid #F1D0A9;
 	padding: 5px;
 }
 
 .relatedWrap.relatedIssues {
 	background-color: #F3F3F3;
 	margin: 0 60px 5px 0;
-	padding: 5px;}
+	border-left: 20px solid #75BAFF;
+	padding: 5px;
+}
 
 .relatedWrap.relatedForecasts {
 	background-color: #F3F3F3;
 	margin: 0 60px 5px 0;
+	border-left: 20px solid #F04C3E;
 	padding: 5px;}
 
 .relatedWrapTitle {
@@ -495,6 +532,11 @@ a.regionMenuLabel:hover {
 }
 
 /*FORECAST PAGES */
+
+.forecastRegionSection {
+	font-size: 90%;
+}
+
 .forecast {
 	border: 2px solid #F2EEEF;
 	clear: both;
@@ -502,15 +544,29 @@ a.regionMenuLabel:hover {
 	overflow: hidden;
 }
 .forecastTitle {
-	background-color: #E4E1E6;
+	background-color: #EAEAEA;
 	padding: 2px 0 2px 10px;
 
 }
 .forecastContent {
 	float: left;
-	padding: 0 0 0 3px;
+	padding: 0 0 0 0px;
 	width: 55%;
 }
+
+.entry.singleForecastEntry {
+	margin: 5px 0 0 0;
+}
+
+.singleForecastEntry p {
+	background-color: #EBF3FF;
+	border-radius: 5px;
+}
+
+.mainPost.singleForecastPost {
+	margin: 5px 0 10px 0;
+}
+
 .voteData {
 	visibility: hidden;
 }
@@ -520,6 +576,9 @@ p.voteInstr {
 	font-size: 85%;
 	padding: 5px 5px 10px 5px;
 
+}
+.forecastForm {
+	margin: 5px;
 }
 
 .forecastGraph {
@@ -542,14 +601,14 @@ p.voteInstr {
 
 /*COUNTRY PAGES */
 .countryInfoBox {
-	border: 2px solid #F2EEEF;
-  	background-color: #FFFFFF;
-	margin: 0 60px 5px 0;
+	border: 2px solid #EAEAEA;
+	border-radius: 5px;
+	margin: 5px 60px 5px 0;
 	font-size: .8em;
 }
 
 .countryInfoBoxTitle {
-	background-color: #F2EEEF;
+	background-color: #EAEAEA;
 	font-size: 1.1em;
 	font-weight: ;
 	padding: 2px 0 2px 10px;
@@ -569,6 +628,14 @@ p.voteInstr {
 	font-size: 12px;
 }
 
+.mainPost.issueArchivePost {
+	border-color: #EAEAEA;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+}
 
 .simple-links-item.simple-links-widget-item {
 	padding: 0px 0px 10px 0px;
