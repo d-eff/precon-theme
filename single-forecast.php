@@ -23,20 +23,19 @@
 	 		</div>
 	 		<div class="forecast">
 		 		<div class="forecastContent">
+		 			<h3 class="forecastTitle">Expert Analysis</h3>
 		 			<div class="forecastContentExpert">
-			 			<h3 class="forecastTitle">Expert Analysis</h3>
-			 		</div>
-		 			<?php echo(get_post_meta($post->ID, "Expert", true)); ?></div>
+			 			<?php echo(get_post_meta($post->ID, "Expert", true)); ?></div>
+		 			</div>
 		 		<div class="voteData" data-votes="<?php getData($post->ID, 'auth'); ?>"></div>
 		 		<svg id="visualisation1" class="forecastGraph" width="300" height="200"></svg>
 	 		</div>
 	 		<div class="forecast">
-		 		
 		 		<div class="forecastContent">
+		 			<h3 class="forecastTitle">Community Analysis</h3>
 		 			<div class="forecastContentCommunity">
-			 			<h3 class="forecastTitle">Community Analysis</h3>
-			 		</div>
-		 			<?php echo(get_post_meta($post->ID, "Community", true)); ?></div>
+			 			<?php echo(get_post_meta($post->ID, "Community", true)); ?></div>
+		 			</div>
 		 		<div class="voteData" data-votes="<?php getData($post->ID, 'sub'); ?>"></div>
 		 		<svg id="visualisation2" class="forecastGraph" width="300" height="200"></svg>
 		 	</div>
