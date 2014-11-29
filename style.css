@@ -78,6 +78,10 @@ em {
   min-width: 800px;
 }
 
+h2 {
+	color: black;
+}
+
 /*HEADER*/
 .siteHeader{
 	background-color: #666699;
@@ -308,7 +312,7 @@ em {
 }
 
 .entry.singleCountryEntry {
-	margin: 20px 0;
+	margin: 5px 0 5px 0;
 	padding: 0px;
 	border-style: solid;
 	border-width: 2px;
@@ -522,7 +526,7 @@ a.regionMenuLabel:hover {
 	padding: 5px;}
 
 .relatedWrapTitle {
-	font-size: .8em
+	font-size: 1em
 }
 
 
@@ -547,6 +551,17 @@ a.regionMenuLabel:hover {
 	float: left;
 	padding: 0 0 0 0px;
 	width: 55%;
+}
+
+.forecastContentHouse {
+	padding: 0 0 0 20px;
+}
+.forecastContentExpert {
+	padding: 0 0 0 20px;
+}
+
+.forecastContentCommunity {
+	padding: 0 0 0 20px;
 }
 
 .entry.singleForecastEntry {
@@ -623,6 +638,13 @@ p.voteInstr {
 	font-size: 12px;
 }
 
+.mainPost.singleIssuePost {
+	margin: 5px 0 10px 0;
+}
+
+.entry.singleIssueEntry {
+	margin: 5px 0 0 0;
+}
 .mainPost.issueArchivePost {
 	border-color: #EAEAEA;
 	border-style: solid;
