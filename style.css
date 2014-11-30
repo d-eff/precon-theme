@@ -12,7 +12,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+g
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -76,10 +76,6 @@ em {
   max-width: 85%;
   margin: 0 auto;
   min-width: 800px;
-}
-
-h2 {
-	color: black;
 }
 
 /*HEADER*/
@@ -169,6 +165,7 @@ h2 {
 	vertical-align: top;
 	text-align: right;
 	float: right;
+	color: white;
 }
 .socialLinks li{
 	margin: 15px 0 0 0;
@@ -504,7 +501,9 @@ a.regionMenuLabel:hover {
 
 /*SHARED*/
 
-
+.relatedItemTitle a {
+	color: #666699;
+}
 .relatedWrap.relatedCountries {
 	background-color: #F3F3F3;
 	margin: 0 60px 5px 0;
@@ -526,7 +525,7 @@ a.regionMenuLabel:hover {
 	padding: 5px;}
 
 .relatedWrapTitle {
-	font-size: 1em
+	font-size: .9em
 }
 
 
@@ -553,15 +552,9 @@ a.regionMenuLabel:hover {
 	width: 55%;
 }
 
-.forecastContentHouse {
-	padding: 0 0 0 20px;
-}
-.forecastContentExpert {
-	padding: 0 0 0 20px;
-}
 
-.forecastContentCommunity {
-	padding: 0 0 0 20px;
+.forecastContentHouse, .forecastContentExpert, .forecastContentCommunity {
+	padding: 5px 0 5px 10px;
 }
 
 .entry.singleForecastEntry {
