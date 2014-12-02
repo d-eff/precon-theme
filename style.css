@@ -381,10 +381,6 @@ em {
 
 /*WIDGETS*/
 
-.widgetWrap ul li {
-	padding: 0 0 10px 0;
-}
-
 .widgetWrap {
 	margin: 0 0 20px;
 	background-color: #F9F9F9;
@@ -675,6 +671,6 @@ p.voteInstr {
 	display: block;
 }
 
-.redlink {
-    color: red;
+.linkspace {
+    padding: 0 0 10px 0;
 }
