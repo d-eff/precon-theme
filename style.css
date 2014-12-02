@@ -300,7 +300,7 @@ em {
 	padding: 0px;
 	border-style: solid;
 	border-width: 1px;
-	border-color: #F1D0A9;
+	border-color: #EAEAEA;
 }
 
 .singleCountryTitle {
@@ -380,6 +380,11 @@ em {
 }
 
 /*WIDGETS*/
+
+.widgetWrap ul li {
+	padding: 0 0 10px 0;
+}
+
 .widgetWrap {
 	margin: 0 0 20px;
 	background-color: #F9F9F9;
@@ -388,7 +393,7 @@ em {
 }
 
 .widgetTitle {
-	background-color: #A6A6CE;
+	background-color: #595754;
 	color: #FFFFFF;
 	padding: 4px 5px;
 	font-size: 1.2rem;
@@ -405,7 +410,7 @@ em {
 } 
 .widgetWrap a {
 	font-size: 0.8125rem;
-	padding: 0 0 0 5px;
+	padding: 0 0 0px 5px;
 	display: inline-block;
 	border-left: 7px solid #CCCCCC;
 	margin: 1px 6px;
@@ -668,4 +673,8 @@ p.voteInstr {
 }
 .comment-form-comment label{
 	display: block;
+}
+
+.redlink {
+    color: red;
 }
