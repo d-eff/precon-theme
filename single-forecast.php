@@ -18,8 +18,8 @@
 			 			<?php echo(get_post_meta($post->ID, "House", true)); ?>
 			 		</div>
 		 		</div>
-		 		<div class="voteData" data-votes="<?php getData($post->ID, 'admin'); ?>"></div>
-		 		<svg id="visualisation0" class="forecastGraph" width="300" height="200"></svg>
+		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Admin'); ?>"></div>
+		 		<canvas id="adminChart" class="forecastChart" width="250" height="200"></canvas>
 	 		</div>
 	 		<div class="forecast">
 		 		<div class="forecastContent">
@@ -27,8 +27,8 @@
 		 			<div class="forecastContentExpert">
 			 			<?php echo(get_post_meta($post->ID, "Expert", true)); ?></div>
 		 			</div>
-		 		<div class="voteData" data-votes="<?php getData($post->ID, 'auth'); ?>"></div>
-		 		<svg id="visualisation1" class="forecastGraph" width="300" height="200"></svg>
+		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Expert'); ?>"></div>
+		 		<canvas id="expertChart" class="forecastChart" width="250" height="200"></canvas>
 	 		</div>
 	 		<div class="forecast">
 		 		<div class="forecastContent">
@@ -36,8 +36,8 @@
 		 			<div class="forecastContentCommunity">
 			 			<?php echo(get_post_meta($post->ID, "Community", true)); ?></div>
 		 			</div>
-		 		<div class="voteData" data-votes="<?php getData($post->ID, 'sub'); ?>"></div>
-		 		<svg id="visualisation2" class="forecastGraph" width="300" height="200"></svg>
+		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Sub'); ?>"></div>
+		 		<canvas id="subChart" class="forecastChart" width="250" height="200"></canvas>
 		 	</div>
 	 	</div>
 
@@ -117,7 +117,7 @@
  			get_currentuserinfo();
  			$tid = get_the_ID();
  			$intime = get_post_time('U', false);
- 			custom_vote_function($tid, $current_user->user_level, $intime, $current_user->user_ID); 
+ 			custom_vote_function($tid, $current_user->user_level, $intime, $current_user->ID); 
  		} else {
  			notlogged_form();
 

@@ -7,7 +7,7 @@
 		<article class="mainPost">
 			<h1>Sorry.</h1>
 			<p>We can't seem to find the content you're looking for.</p>
-			<p>Try the search box in the upper right, or try browsing our <a href="/forecast">Forecast</a> or <a href="/issue">Issues</a> sections.</p>	 	
+			<p>Try the search box in the upper right, or try browsing our <a href="/forecasts">Forecast</a> or <a href="/issues">Issues</a> sections.</p>	 	
 		</article>
 	</div>
 
