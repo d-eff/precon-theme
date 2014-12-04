@@ -645,12 +645,16 @@ p.voteInstr {
 	border-width: 2px;
 	border-radius: 5px;
 	margin: 5px;
-	padding: 5px;
+	padding: 0px;
 }
 
-.simple-links-item.simple-links-widget-item {
-	padding: 0px 0px 10px 0px;
+.postTitle.issueArchivePostTitle {
+	background-color: #EAEAEA;
+	padding: 0 0 0 5px;
+}
 
+.countryListExcerpt {
+	padding: 5px
 }
 
 /*COMMENTS*/
@@ -671,6 +675,16 @@ p.voteInstr {
 	display: block;
 }
 
+
+.simple-links-item.simple-links-widget-item {
+	padding: 5px 0px 5px 0px;
+}
+
 .linkspace {
-    padding: 0 0 10px 0;
+    padding: 5px 0 5px 0;
+}
+
+.linkcolor {
+	padding: 5px 0 5px 0;
+	background-color: #EBDADA !important;
 }
