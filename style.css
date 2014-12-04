@@ -603,6 +603,11 @@ p.voteInstr {
 	background-color: #F3F3F3;
 }
 
+.forecastChart {
+	float: right;
+	margin-right: 10px;
+}
+
 /*COUNTRY PAGES */
 .countryInfoBox {
 	border: 2px solid #EAEAEA;
