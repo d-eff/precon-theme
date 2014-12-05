@@ -33,7 +33,7 @@
 						$pid = $post->ID; ?>
 						<p class="forecastResult forecastResultHouse">House <?php echo get_post_meta($pid, 'runningAverageAdmin', true); ?>%</p>
 						<p class="forecastResult forecastResultExpert">Experts <?php echo get_post_meta($pid, 'runningAverageExpert', true); ?>%</p>
-						<p class="forecastResult forecastResultSub">Subscrbers <?php echo get_post_meta($pid, 'runningAverageSub', true); ?>%</p>
+						<p class="forecastResult forecastResultSub">Community <?php echo get_post_meta($pid, 'runningAverageSub', true); ?>%</p>
 					</div>
 					</li>
 				<?php $count++;
