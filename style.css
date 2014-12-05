@@ -602,10 +602,15 @@ p.voteInstr {
 .evenForecast,
 .oddForecast {
 	margin: 2px 0;
-	padding: 2px;
+	padding: 5px;
+	clear: both;
+	overflow: hidden;
 }
 .evenForecast {
 	background-color: #F3F3F3;
+}
+.forecastResults {
+	float: right;
 }
 
 .forecastChart {
