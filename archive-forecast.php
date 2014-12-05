@@ -5,8 +5,6 @@
 	<div class="normalpageFeed">
 	<div class="headlineBox"><h3 class="columnTitle">Current Forecasts</h3></div>
 
-
-		<p class="regionListTitle">By Region:</p>
 			<?php $taxons = array(
 					'category'
 				);
@@ -30,7 +28,14 @@
 					));
 				foreach($postlist as $post):
 					setup_postdata($post); ?>
-					<li class="<?php $count % 2 == 0 ? print 'evenForecast' : print 'oddForecast'?>"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+					<li class="<?php $count % 2 == 0 ? print 'evenForecast' : print 'oddForecast'?>"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+					<div class="forecastResults"><?php
+						$pid = $post->ID; ?>
+						<p class="forecastResult forecastResultHouse">House <?php echo get_post_meta($pid, 'runningAverageAdmin', true); ?>%</p>
+						<p class="forecastResult forecastResultHouse">Experts <?php echo get_post_meta($pid, 'runningAverageExpert', true); ?>%</p>
+						<p class="forecastResult forecastResultHouse">Subscrbers <?php echo get_post_meta($pid, 'runningAverageSub', true); ?>%</p>
+					</div>
+					</li>
 				<?php $count++;
 				wp_reset_postdata(); 
 				endforeach; ?>
