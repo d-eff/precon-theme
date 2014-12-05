@@ -611,6 +611,7 @@ p.voteInstr {
 }
 .forecastResults {
 	float: right;
+	font-size: 65%;
 }
 
 .forecastChart {
