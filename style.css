@@ -220,32 +220,32 @@ em {
 	margin: 10px 0;
 	min-height: 800px;
 	overflow: hidden;
-	padding-left: 210px;
+	padding-left: 200px;
 }
 .main {
-	padding-right: 245px;	
+	padding-right: 230px;	
 }
 
 .mainSidebarLeft {
 	float: left;
 	position: relative;
-	width: 210px;
+	width: 200px;
 	vertical-align: top;
 }
 
 .mainSidebarRight {
 	float: left;
 	position: relative;
-	width: 245px;
+	width: 230px;
 	vertical-align: top;
 }
 
 .mainSidebarLeft {
-	right: 210px;
+	right: 200px;
 	margin-left: -100%;
 }
 .mainSidebarRight {
-	margin-right: -245px; 
+	margin-right: -230px; 
 }
 
 .homepageFeed {
@@ -269,7 +269,7 @@ em {
 	font-family: tahoma, arial, sans-serif;
 	font-size: 0.8125rem;
 	line-height: 1.2;
-	margin: 0 0 30px;
+	margin: 0 0 10px;
 	overflow: hidden;
 }
 .postMeta {
@@ -305,7 +305,7 @@ em {
 
 .singleCountryTitle {
 	padding: 2px 0 2px 10px;
-	background-color: #EAEAEA;
+	background-color: #75BAFF;
 }
 
 .entry.singleCountryEntry {
@@ -314,7 +314,7 @@ em {
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 5px;
-	border-color: #EAEAEA;
+	border-color: #75BAFF;
 }
 
 .mainPost.singleCountryPost {
@@ -323,7 +323,7 @@ em {
 
 .singleIssueTitle {
 	padding: 2px 0 2px 10px;
-	background-color: #EAEAEA;
+	background-color: #75BAFF;
 }
 
 .entry.singleIssueEntry {
@@ -332,7 +332,7 @@ em {
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 5px;
-	border-color: #EAEAEA;
+	border-color: #75BAFF
 }
 .entry p {
 	padding: 5px;
@@ -343,9 +343,9 @@ em {
 	background-color: #f6f6f6;
 	border: solid 1px #f6f6f6;
 	color: #555555;
-	margin: 10px auto;
+	margin:  auto;
 	padding: 5px 5px 5px 5px;
-	width:85%;
+	width:60%;
 }
 .excerpt, .full {
 	overflow: hidden;
@@ -507,23 +507,27 @@ a.regionMenuLabel:hover {
 }
 .relatedWrap.relatedCountries {
 	background-color: #F3F3F3;
-	margin: 0 60px 5px 0;
+	margin: 5px 60px 5px 0;
 	border-left: 20px solid #F1D0A9;
 	padding: 5px;
+	border-radius: 5px;
 }
 
 .relatedWrap.relatedIssues {
 	background-color: #F3F3F3;
-	margin: 0 60px 5px 0;
+	margin: 5px 60px 5px 0;
 	border-left: 20px solid #75BAFF;
 	padding: 5px;
+	border-radius: 5px;
 }
 
 .relatedWrap.relatedForecasts {
 	background-color: #F3F3F3;
-	margin: 0 60px 5px 0;
+	margin: 5px 60px 5px 0;
 	border-left: 20px solid #F04C3E;
-	padding: 5px;}
+	padding: 5px;
+	border-radius: 5px;
+}
 
 .relatedWrapTitle {
 	font-size: .9em
@@ -537,10 +541,11 @@ a.regionMenuLabel:hover {
 }
 
 .forecast {
-	border: 2px solid #F2EEEF;
+	border: 2px solid #EAEAEA;
 	clear: both;
 	margin: 10px 0;
 	overflow: hidden;
+	border-radius: 5px;
 }
 .forecastTitle {
 	background-color: #EAEAEA;
@@ -612,7 +617,7 @@ p.voteInstr {
 .countryInfoBox {
 	border: 2px solid #EAEAEA;
 	border-radius: 5px;
-	margin: 5px 60px 5px 0;
+	margin: 5px 60px 10px 0;
 	font-size: .8em;
 }
 
