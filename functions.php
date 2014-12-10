@@ -169,6 +169,24 @@ function precon_widgets_init() {
 	) );
 
     register_sidebar( array(
+        'name' => 'Forecasts Index Left Sidebar',
+        'id' => 'forecasts_left',
+        'before_widget' => '<div class="widgetWrap">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgetTitle">',
+        'after_title' => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name' => 'Issues Index Left Sidebar',
+        'id' => 'issues_left',
+        'before_widget' => '<div class="widgetWrap">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgetTitle">',
+        'after_title' => '</h4>',
+    ) );
+
+    register_sidebar( array(
         'name' => 'Footer Widget Area',
         'id' => 'footer_widgets',
         'before_widget' => '<div class="footer_widget">',

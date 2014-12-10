@@ -44,9 +44,9 @@
 			<?php endforeach; ?>	
 	</div>
 
-	<?php if ( is_active_sidebar( 'main_left' ) ) : ?>
+	<?php if ( is_active_sidebar( 'forecasts_left' ) ) : ?>
 		<div class="mainSidebarLeft widget-area" role="complementary">
-			<?php dynamic_sidebar( 'main_left' ); ?>
+			<?php dynamic_sidebar( 'forecasts_left' ); ?>
 		</div>
 	<?php endif; ?>
 </div>

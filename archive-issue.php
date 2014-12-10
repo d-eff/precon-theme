@@ -24,8 +24,8 @@ get_header(); ?>
 	</div>
 
 	<div class="mainSidebarLeft widget-area" role="complementary">
-		<?php if ( is_active_sidebar( 'main_left' ) ) {
-			dynamic_sidebar( 'main_left' ); 
+		<?php if ( is_active_sidebar( 'issues_left' ) ) {
+			dynamic_sidebar( 'issues_left' ); 
 		}?>
 	</div>
 </div>
