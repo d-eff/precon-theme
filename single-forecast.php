@@ -10,7 +10,9 @@
 		
 
 	 	<div class="entry singleForecastEntry">
-	 		<?php the_content(); ?>
+	 		<div class="forecastBackground">
+		 		<?php the_content(); ?>
+		 	</div>
 	 		<div class="forecast">
 		 		<div class="forecastContent">
 		 			<h3 class="forecastTitle">House Analysis</h3>

@@ -9,7 +9,6 @@
 		<article class="mainPost singleCountryPost">
 
 	 	<div class="entry singleCountryEntry">
-	 		<h1 class="singleCountryTitle">Background</h1>
 	 		<?php the_content(); ?>
 	 	</div>
  	 	<?php endwhile; else : ?>

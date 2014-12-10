@@ -612,7 +612,13 @@ p.voteInstr {
 
 .forecastResults {
 	float: right;
-	font-size: 65%;
+	font-size: 75%;
+	display: table-row;
+}
+
+.forecastResult {
+	display: table-cell;
+	padding: 0 10px;
 }
 
 .forecastChart {

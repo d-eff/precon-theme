@@ -7,7 +7,6 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="mainPost singleIssuePost">
 	 	<div class="entry singleIssueEntry">
-	 		<h1 class="singleIssueTitle">Background</h1>
 	 		<?php the_content(); ?>
 	 	</div>
 	 	<?php endwhile; else : ?>
