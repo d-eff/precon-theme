@@ -543,6 +543,10 @@ a.regionMenuLabel:hover {
 .forecastRegionSection {
 	font-size: 90%;
 }
+.forecastRegionList a {
+	max-width: 65%;
+	display: inline-block;
+}
 
 .forecast {
 	border: 2px solid #EAEAEA;
@@ -611,14 +615,15 @@ p.voteInstr {
 }
 
 .forecastResults {
+	display: table-row;
 	float: right;
 	font-size: 75%;
-	display: table-row;
+	width: 30%;
 }
 
 .forecastResult {
 	display: table-cell;
-	padding: 0 10px;
+	width: 33%;
 }
 
 .forecastChart {
