@@ -69,8 +69,9 @@
 	<div class="relatedWrap relatedIssues">
 		<h1 class="relatedWrapTitle">Related Issues</h1>
 		<?php foreach ($issues as $apost): ?>
-			<?php setup_postdata($apost); ?>
-			<h2 class="relatedItemTitle relatedIssueTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+      <?php $post = $apost;
+        setup_postdata($post); ?>
+			<h2 class="relatedItemTitle relatedIssueTitle"><a href="<?php echo the_permalink(); ?>" rel="bookmark"><?php echo the_title(); ?></a></h2>
 			<?php wp_reset_postdata();
 		endforeach; ?>
 	</div> 
@@ -81,8 +82,9 @@
 	<div class="relatedWrap relatedForecasts">
 		<h1 class="relatedWrapTitle">Related Forecasts</h1>
 		<?php foreach ($forecasts as $apost): ?>
-			<?php setup_postdata($apost); ?>
-			<h2 class="relatedItemTitle relatedForecastTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+      <?php $post = $apost;
+        setup_postdata($post); ?>
+			<h2 class="relatedItemTitle relatedForecastTitle"><a href="<?php echo the_permalink(); ?>" rel="bookmark"><?php echo the_title(); ?></a></h2>
 			<?php wp_reset_postdata();
 		endforeach; ?>
 	</div>

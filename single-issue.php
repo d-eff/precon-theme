@@ -43,8 +43,9 @@
 	<div class="relatedWrap relatedCountries">
 		<h1 class="relatedWrapTitle">Related Countries</h1>
 		<?php foreach ($countries as $apost): ?>
-			<?php setup_postdata($apost); ?>
-			<h2 class="relatedItemTitle relatedCountryTitle"><a href="<?php echo $apost->guid; ?>" rel="bookmark"><?php echo $apost->post_title; ?></a></h2>
+      <?php $post = $apost;
+        setup_postdata($post); ?>
+			<h2 class="relatedItemTitle relatedCountryTitle"><a href="<?php echo the_permalink(); ?>" rel="bookmark"><?php echo the_title(); ?></a></h2>
 			<?php wp_reset_postdata();
 		endforeach; ?>
 	</div>
