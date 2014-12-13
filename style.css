@@ -303,11 +303,6 @@ em {
 	border-color: #EAEAEA;
 }
 
-.singleCountryTitle {
-	padding: 2px 0 2px 10px;
-	background-color: #EBF3FF;
-}
-
 .entry.singleCountryEntry {
 	margin: 5px 0 5px 0;
 	padding: 0px;
@@ -322,19 +317,18 @@ em {
 	margin: 0px;
 }
 
-.singleIssueTitle {
-	padding: 2px 0 2px 10px;
-	background-color: #EBF3FF;
-}
-
 .entry.singleIssueEntry {
-	margin: 20px 0 0;
+	margin: 5px 0 5px 0;
 	padding: 0px;
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 5px;
 	border-color: #75BAFF;
 	background-color: #EBF3FF;
+}
+
+.mainPost.singleIssuePost {
+	margin: 0px;
 }
 .entry p {
 	padding: 5px;
@@ -548,6 +542,16 @@ a.regionMenuLabel:hover {
 	display: inline-block;
 }
 
+.entry.singleForecastEntry .forecastBackground {
+	margin: 5px 0 5px 0;
+	padding: 0px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: #75BAFF;
+	background-color: #EBF3FF;
+}
+
 .forecast {
 	border: 2px solid #EAEAEA;
 	clear: both;
@@ -655,7 +659,7 @@ p.voteInstr {
 	font-size: .8em;
 }
 
-/*ISSUE PAGES*/
+/*ISSUE PAGES*/ƒ
 .singleIssueTitle {
 	font-size: 12px;
 }
@@ -719,9 +723,12 @@ p.voteInstr {
 
 .imageinsert {    
 	float: right;
-	margin: 0 3px 1px 0;
+	margin: 3px 3px 6px 0;
 	border-radius: 3px;
 	text-align: center;
 	font-size: xx-small;
+}
+
+.wp-caption-text .external {
 	color: #BAB5AD;
 }
