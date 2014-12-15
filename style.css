@@ -538,7 +538,7 @@ a.regionMenuLabel:hover {
 	font-size: 90%;
 }
 .forecastRegionList a {
-	max-width: 65%;
+	width: 65%;
 	display: inline-block;
 }
 
@@ -569,7 +569,6 @@ a.regionMenuLabel:hover {
 	padding: 0 0 0 0px;
 	width: 55%;
 }
-
 
 .forecastContentHouse, .forecastContentExpert, .forecastContentCommunity {
 	padding: 5px 0 5px 10px;
@@ -607,13 +606,16 @@ p.voteInstr {
 .forecastRegionTitle {
 	font-weight: bold;
 }
+
 .evenForecast,
 .oddForecast {
 	margin: 2px 0;
-	padding: 5px;
+	padding: 3px;
 	clear: both;
 	overflow: hidden;
+	font-size: 95%;
 }
+
 .evenForecast {
 	background-color: #F3F3F3;
 }
@@ -621,13 +623,43 @@ p.voteInstr {
 .forecastResults {
 	display: table;
 	float: right;
-	font-size: 75%;
-	width: 30%;
+	font-size: 100%;
+	width: 180px;
+	margin: 0px;
 }
 
-.forecastResult, .forecastResultTitle {
+.forecastResult {
 	display: table-cell;
-	width: 33%;
+	width: 40%;
+}
+
+.forecastResultTitle {
+	background-color: #DCDCFA;
+	padding: 2px;
+	display: table-cell;
+	width: 40%;
+}
+
+.forecastResultTitle.forecastResultHouse {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.forecastResultTitle.forecastResultExpert {
+	text-indent: 5px;
+}
+
+.forecastResultTitle.forecastResultSub {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.forecastResult.forecastResultHouse {
+	text-indent: 10px;
+}
+
+.forecastResult.forecastResultExpert {
+	text-indent: 5px;
 }
 
 .forecastChart {
