@@ -502,6 +502,7 @@ a.regionMenuLabel:hover {
 
 .relatedItemTitle a {
 	color: #666699;
+	font-size: 85%;
 }
 .relatedWrap.relatedCountries {
 	background-color: #F3F3F3;

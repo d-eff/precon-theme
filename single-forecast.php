@@ -49,7 +49,7 @@
 		<?php endif; ?>
 
 		<?php $post_categories = wp_get_post_categories($post->ID);
-		$country_cat = get_cat_ID('country');
+		$country_cat = get_cat_ID('countries');
 		$countries = array();
 		foreach ($post_categories as $key => $value):
 			//have to do this to check parent

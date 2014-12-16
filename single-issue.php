@@ -15,7 +15,7 @@
 		</article>
 
 	<?php $thispost = $post->ID; 
-		$country_cat = get_cat_ID('country');
+		$country_cat = get_cat_ID('countries');
 		$thisCat = $post->post_title;
 	?>
 
