@@ -263,6 +263,8 @@ em {
 	font-size: 1.8rem;
 	margin-bottom: 5px;
 	padding: 4px 5px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 
 .mainPost {
@@ -390,7 +392,9 @@ em {
 	background-color: #595754;
 	color: #FFFFFF;
 	padding: 4px 5px;
-	font-size: 1.2rem;
+	font-size: 1rem;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 .widgetWrap ul {
 	border-left: 1px solid #DDDDDD;
@@ -764,4 +768,8 @@ p.voteInstr {
 
 .wp-caption-text .external {
 	color: #BAB5AD;
+}
+
+.menu-what-were-reading-container a {
+	padding: 5px 0 5px 4px;
 }
