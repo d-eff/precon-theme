@@ -25,6 +25,7 @@
 				<span class='st_email' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
 			</p>
  		</div>
- 	</div>
  	<div class="tagWrap"><?php the_tags(); ?></div>
+ 	</div>
+ 	
 </article>
