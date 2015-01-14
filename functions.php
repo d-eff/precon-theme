@@ -101,7 +101,7 @@ add_filter('get_the_excerpt', 'custom_wp_trim_excerpt');
  * Use front page cat on front page
  * ------------------------------------------------------------------------ */
 function category_for_homepage( $query ) {
-    $homepage_cat = get_cat_ID('Front page');
+    $homepage_cat = get_cat_ID('1 Front page');
     if($homepage_cat && $query->is_home() && $query->is_main_query() ) {
         $query->set( 'cat', $homepage_cat );
     }

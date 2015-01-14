@@ -26,4 +26,5 @@
 			</p>
  		</div>
  	</div>
+ 	<div class="tagWrap"><?php the_tags(); ?></div>
 </article>

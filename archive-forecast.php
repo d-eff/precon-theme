@@ -26,8 +26,8 @@
 					</div>
 			<ul class="forecastRegionList">
 				<?php $postlist = get_posts(array(
-					'orderby'          => 'post_date',
-					'order'            => 'DESC',
+					'orderby'          => 'title',
+					'order'            => 'ASC',
 					'post_type'        => 'forecast',
 					'posts_per_page'   => -1,
 					'category'		   => $catstuff->term_id
