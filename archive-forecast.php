@@ -19,7 +19,7 @@
 			<div class="forecastRegionSection">
 			<p class="forecastRegionTitle"><?php echo $catstuff->name; ?></p>
 
-					<div class="forecastResults">
+					<div class="forecastResults forecastResultsTitleWrap">
 						<p class="forecastResultTitle forecastResultHouse">House</p>
 						<p class="forecastResultTitle forecastResultExpert">Experts</p>
 						<p class="forecastResultTitle forecastResultSub">Community</p>
@@ -37,9 +37,9 @@
 					<li class="<?php $count % 2 == 0 ? print 'evenForecast' : print 'oddForecast'?>"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 					<div class="forecastResults"><?php
 						$pid = $post->ID; ?>
-						<p class="forecastResult forecastResultHouse"><?php echo get_post_meta($pid, 'runningAverageAdmin', true); ?>%</p>
-						<p class="forecastResult forecastResultExpert"><?php echo get_post_meta($pid, 'runningAverageExpert', true); ?>%</p>
-						<p class="forecastResult forecastResultSub"><?php echo get_post_meta($pid, 'runningAverageSub', true); ?>%</p>
+						<p class="forecastResult forecastResultHouse"><?php echo round(get_post_meta($pid, 'runningAverageAdmin', true)); ?>%</p>
+						<p class="forecastResult forecastResultExpert"><?php echo round(get_post_meta($pid, 'runningAverageExpert', true)); ?>%</p>
+						<p class="forecastResult forecastResultSub"><?php echo round(get_post_meta($pid, 'runningAverageSub', true)); ?>%</p>
 					</div>
 					</li>
 				<?php $count++;

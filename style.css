@@ -550,8 +550,8 @@ a.regionMenuLabel:hover {
 	font-size: 120%;
 }
 .forecastRegionList a {
-	width: 65%;
-	display: inline-block;
+	width: 100%;
+	float: left;
 }
 
 .entry.singleForecastEntry .forecastBackground {
@@ -621,6 +621,12 @@ p.voteInstr {
 }
 .forecastRegionTitle {
 	font-weight: bold;
+	float: left;
+	clear: both;
+}
+
+.forecastRegionList li {
+	padding-right: 220px;
 }
 
 .evenForecast, .oddForecast {
@@ -637,10 +643,10 @@ p.voteInstr {
 
 .forecastResults {
 	display: table;
-	float: right;
+	float: left;
 	font-size: 100%;
-	width: 180px;
-	margin: 0px;
+	width: 220px;
+	margin-right: -220px;
 }
 
 .forecastResult {
@@ -653,6 +659,11 @@ p.voteInstr {
 	padding: 2px;
 	display: table-cell;
 	width: 40%;
+}
+
+.forecastResultsTitleWrap {
+	float: right;
+	margin: 0 0 4px;
 }
 
 .forecastResultTitle.forecastResultHouse {
