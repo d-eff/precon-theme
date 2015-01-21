@@ -566,10 +566,11 @@ a.regionMenuLabel:hover {
 
 .forecast {
 	border: 2px solid #EAEAEA;
+	border-radius: 5px;
 	clear: both;
 	margin: 10px 0;
 	overflow: hidden;
-	border-radius: 5px;
+	padding-right: 275px;
 }
 .forecastTitle {
 	background-color: #EAEAEA;
@@ -579,7 +580,7 @@ a.regionMenuLabel:hover {
 .forecastContent {
 	float: left;
 	padding: 0 0 0 0px;
-	width: 55%;
+	width: 100%;
 }
 
 .forecastContent a {
@@ -690,7 +691,7 @@ p.voteInstr {
 
 .forecastChart {
 	float: right;
-	margin-right: 10px;
+	margin-right: -265px;
 }
 
 /*COUNTRY PAGES */
