@@ -93,23 +93,28 @@ em {
 }
 
 .siteTitle {
-	margin: 0 0 10px;
+	margin: 0px 0px 0px 0px;
 }
 .siteTitle a {
-	font-size: 3.2rem;
+	font-size: 4rem;
+	font-style: bold;
 	font-family: helvetica;
 	color: #FFFFFF;
-	margin: 0 0 8px;
+	margin: 0px 0px 20px 0px;
 }
 .siteTitleWrap {
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
-	margin: 5px 0 0;
+	margin: 15px 0px 0px 0px;
+}
+
+.siteSubtitle h2 {
+	margin: 10px 0px 0px 0px;
 }
 
 .siteLogo {
-	border: 0px solid #CCCCCC;
+	border: 3px solid #FFFFFF;
 	margin: 2px 0px 0px 2px;
 }
 
@@ -486,7 +491,7 @@ a.regionMenuLabel:hover {
 	display: inline-block;
 	margin: 0 2% 0 0;
 	vertical-align: top;
-	font-size: 13px;
+	font-size: 15px;
 }
 .footerWidgetTitle {
 	margin: 0 0 4px;
@@ -812,7 +817,7 @@ p.voteInstr {
 	background-color: #FFE5E5;
 	border-radius: 15px;
 	padding: 12px;
-	font-size: 18px;
+	font-size: 22px;
 	font-style: italic;
-	text-align:center;
+	text-align: center;
 }
