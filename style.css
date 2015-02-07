@@ -95,9 +95,10 @@ em {
 .siteTitle {
 	margin: 0px 0px 0px 0px;
 }
+
 .siteTitle a {
 	font-size: 4rem;
-	font-style: bold;
+	font-weight: 590;
 	font-family: helvetica;
 	color: #FFFFFF;
 	margin: 0px 0px 20px 0px;
@@ -109,8 +110,9 @@ em {
 	margin: 15px 0px 0px 0px;
 }
 
-.siteSubtitle h2 {
-	margin: 10px 0px 0px 0px;
+.siteSubtitle {
+	font-size: 1.2rem;
+	margin: 3px 0px 0px 0px;
 }
 
 .siteLogo {
