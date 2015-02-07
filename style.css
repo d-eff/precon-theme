@@ -42,8 +42,13 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	list-style: disc;
 }
+
+.mainPost ul li {
+	margin: 0 5px 0 20px;
+}
+
 blockquote, q {
 	quotes: none;
 }
@@ -104,7 +109,8 @@ em {
 }
 
 .siteLogo {
-	border: 3px solid #CCCCCC;
+	border: 0px solid #CCCCCC;
+	margin: 2px 0px 0px 2px;
 }
 
 .registrationLink a {
@@ -195,7 +201,7 @@ em {
 	border-right: 1px solid #554C64; 
 }
 .mainMenu a {
-	color: #47476B;
+	color: #24243F;
 	padding: 8px 18px;
 	display: inline-block;
 	font-size: 16px;
@@ -269,7 +275,7 @@ em {
 
 .mainPost {
 	font-family: tahoma, arial, sans-serif;
-	font-size: 0.8125rem;
+	font-size: 1rem;
 	line-height: 1.2;
 	margin: 0 0 10px;
 	overflow: hidden;
@@ -284,7 +290,7 @@ em {
 }
 .postTitle a {
 	font-family: lucida grande;
-	font-size: 1.6em;
+	font-size: 1.3em;
 	font-weight: 600;
 	
 	color: #000000;
