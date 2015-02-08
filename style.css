@@ -156,22 +156,23 @@ em {
 
 .searchform {
 	position: absolute;
-	bottom: -1px;
-	right: -1px;
+	bottom: 20px;
+	right: 0px;
 	padding: 4px;
-	border: 1px solid #FFFFFF;
 }
 .searchFormInput {
-	width: 200px;
+	border: none;
+	height: 20px;
+	width: 150px;
 }
 
 .siteByline {
-	display: inline-block;
-	width: 20%;
-	vertical-align: top;
+	bottom: 5px;
 	font-size: 0.8125rem;
 	font-style: italic;
-	margin-top: 37px;
+	position: absolute;
+	right: 5px;
+	width: 100%;
 }
 .headerRight {
 	display: inline-block;
@@ -183,7 +184,7 @@ em {
 .socialLinks li{
 	margin: 15px 0 0 0;
 	display: inline-block;
-	width: 35px;
+	width: 34px;
 }
 .socialLinks img {
 	width: 100%;
@@ -191,7 +192,7 @@ em {
 .socialHeader {
 	position: absolute;
 	right: 5px;
-	bottom: 38px;
+	bottom: 50px;
 }
 
 .mainMenuWrap {

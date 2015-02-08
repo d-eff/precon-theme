@@ -23,7 +23,6 @@
 	    <h1 class="siteTitle"><a href="/"><?php echo(get_bloginfo('name')); ?></a></h1>
 	    <h2 class="siteSubtitle"><?php echo(get_bloginfo('description')); ?></h2>
 	</div>
-	<h4 class="siteByline"><?php if(get_option('site_byline')): echo(get_option('site_byline')); endif; ?></h4>
 	<div class="headerRight">
 		<?php wp_register('<span class="registrationLink">', '</span>'); ?> | 
 		<?php if(!is_user_logged_in()): ?>
@@ -41,6 +40,7 @@
 			<li><a href="http://www.policyrecon.com/feed/"><img src="<?php echo(get_template_directory_uri() . '/images/social-rss.png');?>"></a></li>
 		</ul>
 		<div class="searchForm"><?php get_search_form(); ?></div>
+		<h4 class="siteByline"><?php if(get_option('site_byline')): echo(get_option('site_byline')); endif; ?></h4>
 	</div>
   </header>  
   	<nav class="mainMenuWrap">
