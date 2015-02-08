@@ -1,7 +1,9 @@
 <?php
 
 
-//INITIALIZATION
+/* ------------------------------------------------------------------------ *
+ * Theme Initialization
+ * ------------------------------------------------------------------------ */
 if ( ! function_exists('precon_setup') ):
   
   function precon_setup() {
@@ -20,7 +22,9 @@ endif;
 add_action('after_setup_theme', 'precon_setup');
 
 
-//CUSTOM SETTINGS
+/* ------------------------------------------------------------------------ *
+ * Custom Theme Settings
+ * ------------------------------------------------------------------------ */
 if( ! function_exists('precon_initialize_theme_options')):
 function precon_initialize_theme_options() {
  
@@ -207,7 +211,7 @@ function precon_scripts() {
 add_action( 'wp_enqueue_scripts', 'precon_scripts' );
 
 /* ------------------------------------------------------------------------ *
- * Menus!
+ * Menus
  * ------------------------------------------------------------------------ */
 
 function register_my_menus() {
@@ -222,7 +226,7 @@ add_action( 'init', 'register_my_menus' );
 
 
 /* ------------------------------------------------------------------------ *
- * Roles!
+ * Custom Roles
  * ------------------------------------------------------------------------ */
 function change_role_name() {
     global $wp_roles;
@@ -240,3 +244,14 @@ function change_role_name() {
     $wp_roles->role_names['subscriber'] = 'Registered User';                 
 }
 add_action('init', 'change_role_name');
+
+/* ------------------------------------------------------------------------ *
+ * Exclude certain pages from search results, for some reason
+ * ------------------------------------------------------------------------ */
+function precon_search_filter($query) {
+	if($query->is_search) {
+		$query->set('post__not_in', array(2527, 824, 830, 295, 297));
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'precon_search_filter');
