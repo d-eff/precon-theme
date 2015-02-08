@@ -14,32 +14,34 @@
 		 		<?php the_content(); ?>
 		 	</div>
 	 		<div class="forecast">
+		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Admin'); ?>"></div>
+		 		<canvas id="adminChart" class="forecastChart" width="325" height="260"></canvas>
 		 		<div class="forecastContent">
 		 			<h3 class="forecastTitle">House Analysis</h3>
 		 			<div class="forecastContentHouse">
 			 			<?php echo(get_post_meta($post->ID, "House", true)); ?>
 			 		</div>
 		 		</div>
-		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Admin'); ?>"></div>
-		 		<canvas id="adminChart" class="forecastChart" width="250" height="200"></canvas>
 	 		</div>
 	 		<div class="forecast">
+		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Expert'); ?>"></div>
+		 		<canvas id="expertChart" class="forecastChart" width="325" height="260"></canvas>
 		 		<div class="forecastContent">
 		 			<h3 class="forecastTitle">Expert Analysis</h3>
 		 			<div class="forecastContentExpert">
-			 			<?php echo(get_post_meta($post->ID, "Expert", true)); ?></div>
-		 			</div>
-		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Expert'); ?>"></div>
-		 		<canvas id="expertChart" class="forecastChart" width="250" height="200"></canvas>
+			 			<?php echo(get_post_meta($post->ID, "Expert", true)); ?>
+					</div>
+		 		</div>
 	 		</div>
 	 		<div class="forecast">
+		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Sub'); ?>"></div>
+		 		<canvas id="subChart" class="forecastChart" width="325" height="260"></canvas>
 		 		<div class="forecastContent">
 		 			<h3 class="forecastTitle">Community Analysis</h3>
 		 			<div class="forecastContentCommunity">
-			 			<?php echo(get_post_meta($post->ID, "Community", true)); ?></div>
-		 			</div>
-		 		<div class="voteData" data-votes="<?php precon_forecast_getData($post->ID, 'Sub'); ?>"></div>
-		 		<canvas id="subChart" class="forecastChart" width="250" height="200"></canvas>
+			 			<?php echo(get_post_meta($post->ID, "Community", true)); ?>
+					</div>
+		 		</div>
 		 	</div>
 	 	</div>
 
