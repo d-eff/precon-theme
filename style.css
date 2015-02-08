@@ -351,8 +351,12 @@ em {
 }
 .entry p {
 	padding: 5px;
-	margin: 0px 0;
+	margin: 0 0 8px;
 
+}
+.no-break {
+	padding: 0px !important;
+	margin: 0px;
 }
 .entry blockquote {
 	background-color: #f6f6f6;
