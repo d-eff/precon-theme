@@ -107,17 +107,17 @@ em {
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
-	margin: 15px 0px 0px 0px;
+	margin: 13px 0px 0px 0px;
 }
 
 .siteSubtitle {
-	font-size: 1.2rem;
-	margin: 3px 0px 0px 0px;
+	font-size: 1.1rem;
+	margin: 0px 0px 0px 0px;
 }
 
 .siteLogo {
-	border: 3px solid #FFFFFF;
-	margin: 2px 0px 0px 2px;
+	border: 0px solid #FFFFFF;
+	margin: 0px 0px 0px 0px;
 }
 
 .registrationLink a {
@@ -224,8 +224,9 @@ em {
 	border-right: none;
 	border-left: 1px solid #554C64; 
 }
-.current-menu-item {
-	background-color: #AAAAAA;
+.current-menu-item a {
+	background-color: #595754;
+	color: #FFFFFF !important;
 }
 
 
@@ -325,7 +326,7 @@ em {
 	margin: 5px 0 5px 0;
 	padding: 0px;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 	border-radius: 5px;
 	border-color: #75BAFF;
 	background-color: #EBF3FF;
@@ -339,7 +340,7 @@ em {
 	margin: 5px 0 5px 0;
 	padding: 0px;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 	border-radius: 5px;
 	border-color: #75BAFF;
 	background-color: #EBF3FF;
@@ -465,7 +466,7 @@ a.regionMenuLabel:hover {
 
 /*FOOTER*/
 .pageFooter {
-	background-color: #AFAFAF;
+	background-color: #595754;
 	color: #FFFFFF;
 	clear: both;
 	line-height: 1.2;
@@ -516,7 +517,7 @@ a.regionMenuLabel:hover {
 	box-sizing: border-box;
 	padding: 0 20px;
 	position: relative;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 	background: white;
 	height: 100%;
@@ -556,6 +557,18 @@ a.regionMenuLabel:hover {
 	font-size: .9em
 }
 
+.relatedDiscussions .relatedWrapTitle {
+	margin: 15px 450px 10px 0px;
+	padding: 3px;
+	font-size: 120%;
+	background-color: #FFE5E5;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #595754;
+}
+
 
 /*FORECAST PAGES */
 
@@ -571,7 +584,7 @@ a.regionMenuLabel:hover {
 	margin: 5px 0 5px 0;
 	padding: 0px;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 	border-radius: 5px;
 	border-color: #75BAFF;
 	background-color: #EBF3FF;
@@ -682,7 +695,6 @@ p.voteInstr {
 
 .forecastResultTitle.forecastResultHouse {
 	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
 }
 
 .forecastResultTitle.forecastResultExpert {
@@ -691,7 +703,6 @@ p.voteInstr {
 
 .forecastResultTitle.forecastResultSub {
 	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
 }
 
 .forecastResult.forecastResultHouse {
