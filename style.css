@@ -101,18 +101,18 @@ em {
 	font-weight: 590;
 	font-family: helvetica;
 	color: #FFFFFF;
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 0px 0px;
 }
 .siteTitleWrap {
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
-	margin: 13px 0px 0px 0px;
+	margin: 10px 0px 0px 0px;
 }
 
 .siteSubtitle {
 	font-size: 1.1rem;
-	margin: 0px 0px 0px 0px;
+	margin: 5px 0px 0px 0px;
 }
 
 .siteLogo {
@@ -522,7 +522,7 @@ a.regionMenuLabel:hover {
 	box-sizing: border-box;
 	padding: 0 20px;
 	position: relative;
-	max-width: 1000px;
+	max-width: 900px;
 	margin: 0 auto;
 	background: white;
 	height: 100%;
@@ -571,7 +571,7 @@ a.regionMenuLabel:hover {
 	border-top-right-radius: 5px;
 	border-style: solid;
 	border-width: 1px;
-	border-color: #595754;
+	border-color: #AFADAB;
 }
 
 
