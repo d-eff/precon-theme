@@ -36,7 +36,7 @@
 		<ul class="socialLinks socialHeader">
 			<li><a href="https://twitter.com/PolicyRecon"><img src="<?php echo(get_template_directory_uri() . '/images/social-twitter.png');?>"></a></li>
 			<li><a href="https://www.facebook.com/PolicyRecon"><img src="<?php echo(get_template_directory_uri() . '/images/social-facebook.png');?>"></a></li>
-			<li><a href="http://www.policyrecon.com/"><img src="<?php echo(get_template_directory_uri() . '/images/social-linkedin.png');?>"></a></li>
+			<li><a href="http://www.linkedin.com/company/5252757"><img src="<?php echo(get_template_directory_uri() . '/images/social-linkedin.png');?>"></a></li>
 			<li><a href="http://www.policyrecon.com/feed/"><img src="<?php echo(get_template_directory_uri() . '/images/social-rss.png');?>"></a></li>
 		</ul>
 		<div class="searchForm"><?php get_search_form(); ?></div>

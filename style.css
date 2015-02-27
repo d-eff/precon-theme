@@ -196,17 +196,20 @@ em {
 }
 
 .mainMenuWrap {
-	margin: 3px 0 0;
+	margin: 6px 0 0;
 	overflow: hidden;
 }
 .mainMenu {
-	background-color: #DDDDDD;
-	border: 1px solid #554C64;
+	background-color: #FFFFFF;
+	border: 0px solid #554C64;
 	font-size: 0; /*to deal with inline-block padding issue*/
 }
 .mainMenu li {
+	background-color: #DDDDDD;
+	border-radius: 3px;
+	margin: 0px 2px 0px 2px;
 	display: inline-block;
-	border-right: 1px solid #554C64; 
+	border-right: 0px solid #554C64; 
 }
 .mainMenu a {
 	color: #24243F;
@@ -217,15 +220,17 @@ em {
 	border-left: none !important; /*bah*/
 }
 .mainMenu a:hover {
+	border-radius: 3px;
 	color: #000000;
 	background-color: #8BAABF;
 }
 .mainMenu :nth-last-child(-n+2) {
 	float: right;
 	border-right: none;
-	border-left: 1px solid #554C64; 
+	border-left: 0px solid #554C64; 
 }
 .current-menu-item a {
+	border-radius: 3px;
 	background-color: #595754;
 	color: #FFFFFF !important;
 }
@@ -291,7 +296,7 @@ em {
 }
 .postMeta {
 	overflow: hidden;
-	background: #EBF3FF;
+	background: #FFFFFF;
 	padding: 5px;
 }
 .postTitle {
@@ -814,6 +819,15 @@ p.voteInstr {
 	text-align: center;
 	font-size: xx-small;
 }
+
+
+.imageinsert2 {    
+	padding: 10px 0px 0px 0px;
+	border-radius: 3px;
+	text-align: right;
+	font-size: xx-small;
+}
+
 
 .wp-caption-text .external {
 	color: #BAB5AD;
